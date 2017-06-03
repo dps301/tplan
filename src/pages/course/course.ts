@@ -11,21 +11,21 @@ export class CoursePage {
     {
       "id": "1",
       "title": "테스트코스1",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI6YzH6Zu9cUPIAWxDiZPN7yjwxquaXwCq3318nwgyqmLO97DD",
+      "image": "assets/images/test.jpg",
       "content": "this is test case 1",
       "like": "46"
     },
     {
       "id": "2",
       "title": "테스트코스2",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI6YzH6Zu9cUPIAWxDiZPN7yjwxquaXwCq3318nwgyqmLO97DD",
+      "image": "assets/images/test.jpg",
       "content": "this is test case 2",
       "like": "36"
     },
     {
       "id": "3",
       "title": "테스트코스3",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI6YzH6Zu9cUPIAWxDiZPN7yjwxquaXwCq3318nwgyqmLO97DD",
+      "image": "assets/images/test.jpg",
       "content": "this is test case 3",
       "like": "71"
     },
