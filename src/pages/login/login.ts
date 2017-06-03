@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { Facebook } from '@ionic-native/facebook';
 
 @IonicPage()
 @Component({
@@ -18,7 +18,7 @@ export class LoginPage {
   }
 
   fbLogin() {
-    this.fb.login(['email', 'public_profile', 'user_friends'])
+    this.fb.login(['email', 'public_profile'])
     .then(
       (result) => {
         alert("FACEBOOK:" + JSON.stringify(result));
