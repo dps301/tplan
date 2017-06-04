@@ -9,6 +9,13 @@ import { LoginPage } from '../pages/login/login';
 import { CoursePage } from '../pages/course/course';
 import { LoginPageModule } from '../pages/login/login.module';
 import { CoursePageModule } from '../pages/course/course.module';
+import { CourseDatailPageModule } from '../pages/course-datail/course-datail.module';
+import { CourseProvider } from '../providers/course/course';
+import { PlanProvider } from '../providers/plan/plan';
+import { CommonProvider } from '../providers/common/common';
+import { HttpService } from '../services/http.service';
+import { HttpModule } from "@angular/http";
+import { ServerAddr } from '../services/server.addr';
 
 @NgModule({
   declarations: [
@@ -19,8 +26,10 @@ import { CoursePageModule } from '../pages/course/course.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
     LoginPageModule,
-    CoursePageModule
+    CoursePageModule,
+    CourseDatailPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,7 +40,12 @@ import { CoursePageModule } from '../pages/course/course.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpService,
+    ServerAddr,
+    CourseProvider,
+    PlanProvider,
+    CommonProvider
   ]
 })
 export class AppModule {}

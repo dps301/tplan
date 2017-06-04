@@ -1,3 +1,3 @@
 <ion-content padding>
-  <course-item *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like"></course-item>
+  <course-item *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" (click)="goDetail(item.id, item.image)"></course-item>
 </ion-content>

@@ -1,0 +1,7 @@
+<ion-content padding>
+    <div class="container" [ngClass]="{checked: item.isMust || item.checked}" *ngFor="let item of spotList" style="border: 1px solid;" (click)="item.checked = checkThisOut(item.isMust, item.checked)">
+        {{item.name}}
+        {{item.content}}
+        {{item.isMust? true:false}}
+    </div>
+</ion-content>

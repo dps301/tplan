@@ -2,12 +2,14 @@
   <ion-navbar>
     <ion-title>teach my plan</ion-title>
   </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-nav [root]="rootPage"></ion-nav>
+</ion-content>
+<ion-footer>
   <ion-navbar>
     <button type="" (click)="rootPage = coursePage">course</button>
     <button type="" (click)="rootPage = loginPage">login</button>
     <button type="">plan</button>
   </ion-navbar>
-</ion-header>
-<ion-content>
-    <ion-nav [root]="rootPage"></ion-nav>
-</ion-content>
+</ion-footer>

@@ -10,7 +10,7 @@ import { CoursePage } from '../pages/course/course';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = CoursePage;
+  rootPage :any = CoursePage;
 
   coursePage = CoursePage;
   loginPage = LoginPage;
