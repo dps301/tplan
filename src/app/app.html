@@ -4,12 +4,12 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-    <ion-nav [root]="rootPage"></ion-nav>
+  <ion-nav [root]="rootPage"></ion-nav>
 </ion-content>
 <ion-footer>
   <ion-navbar>
-    <button type="" (click)="rootPage = coursePage; title = 'course'">course</button>
-    <button type="" (click)="rootPage = loginPage; title = 'login'">login</button>
-    <button type="" (click)="rootPage = planPage; title='plan'">plan</button>
+    <button type="" (click)="changeTab(coursePage)">course</button>
+    <button type="" (click)="changeTab(loginPage)">login</button>
+    <button type="" (click)="changeTab(planPage)">plan</button>
   </ion-navbar>
 </ion-footer>

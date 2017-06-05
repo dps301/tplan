@@ -27,6 +27,7 @@ export class CourseDatailPage {
     this.courseNo = this.navParams.get('courseNo');
     this.image = this.navParams.get('image');
     this.title = this.navParams.get('title');
+    this.planNo = this.navParams.get('planNo');
 
     this.getCourseDetail();
   }
@@ -47,7 +48,7 @@ export class CourseDatailPage {
       if(this.spotList[index].isMust || this.spotList[index].checked)
         this.checkedSpotList.push({id: this.spotList[index].id})
     }
-    this.planProvider.addPlan(this.planNo? this.planNo : '', this.courseNo, this.title, this.image, this.checkedSpotList)
+    this.planProvider.addPlan(this.planNo, this.courseNo, this.title, this.image, this.checkedSpotList)
     .subscribe(
       data => {
         console.log(data);

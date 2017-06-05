@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PlanProvider } from '../../providers/plan/plan';
+import { CourseDatailPage } from '../course-datail/course-datail';
 
 @IonicPage()
 @Component({
@@ -7,12 +9,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'plan-detail.html',
 })
 export class PlanDetailPage {
+  planNo: number = null;
+  courseNo: number = null;
+  title: string = '';
+  image: string = '';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  spotList: any = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private planProvider: PlanProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PlanDetailPage');
+    this.planNo = this.navParams.get('id');
+    this.title = this.navParams.get('title');
+    this.image = this.navParams.get('image');
+    this.getPlanDetail();
   }
 
+  getPlanDetail() {
+    this.planProvider.getPlanDetail(this.planNo)
+    .subscribe(
+      data => {
+        this.spotList = data.json().spot;
+        this.courseNo = data.json().courseNo;
+      }
+    );
+  }
+
+  editPlan() {
+    this.navCtrl.push(CourseDatailPage, {"courseNo": this.courseNo, "image": this.image, "title": this.title, "planNo": this.planNo});
+  }
 }

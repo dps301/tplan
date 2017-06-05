@@ -28,7 +28,7 @@ export class PlanPage {
     );
   }
 
-  goDetail(id: number, title: string) {
-    this.navCtrl.push(PlanDetailPage, {id: id, title: title})
+  goDetail(id: number, title: string, image: string) {
+    this.navCtrl.push(PlanDetailPage, {id: id, title: title, image: image});
   }
 }
