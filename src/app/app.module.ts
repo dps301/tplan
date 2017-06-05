@@ -16,6 +16,8 @@ import { CommonProvider } from '../providers/common/common';
 import { HttpService } from '../services/http.service';
 import { HttpModule } from "@angular/http";
 import { ServerAddr } from '../services/server.addr';
+import { PlanPageModule } from '../pages/plan/plan.module';
+import { PlanItemComponent } from '../components/plan-item/plan-item';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { ServerAddr } from '../services/server.addr';
     HttpModule,
     LoginPageModule,
     CoursePageModule,
-    CourseDatailPageModule
+    PlanPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

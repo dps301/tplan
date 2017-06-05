@@ -13,11 +13,12 @@ export class CourseDatailPage {
   courseNo: number = 0;
   planNo: number = null;
   image: string = '';
-  planName: string = '';
+  title: string = '';
   day: number = 3;
 
   chooseNum: number = 0;
   spotList: Array<any> = [];
+  checkedSpotList: Array<any> = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider, private planProvider: PlanProvider) {
   }
@@ -25,6 +26,7 @@ export class CourseDatailPage {
   ionViewDidLoad() {
     this.courseNo = this.navParams.get('courseNo');
     this.image = this.navParams.get('image');
+    this.title = this.navParams.get('title');
 
     this.getCourseDetail();
   }
@@ -41,7 +43,19 @@ export class CourseDatailPage {
   }
 
   addCourseDetail() {
-    this.planProvider.addPlan(this.planNo, this.courseNo, this.planName, this.image, null)
+    for (var index = 0; index < this.spotList.length; index++) {
+      if(this.spotList[index].isMust || this.spotList[index].checked)
+        this.checkedSpotList.push({id: this.spotList[index].id})
+    }
+    this.planProvider.addPlan(this.planNo? this.planNo : '', this.courseNo, this.title, this.image, this.checkedSpotList)
+    .subscribe(
+      data => {
+        console.log(data);
+      },
+      error => {
+
+      }
+    );
   }
 
   checkThisOut(must, checked) {

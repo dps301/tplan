@@ -1,0 +1,3 @@
+<ion-content padding>
+  <plan-item *ngFor="let item of planList" [image]="item.image" [title]="item.title" [upd]="item.upd" (click)="goDetail(item.id, item.title)"></plan-item>
+</ion-content>

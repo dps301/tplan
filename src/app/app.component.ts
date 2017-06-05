@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
 import { CoursePage } from '../pages/course/course';
+import { PlanPage } from '../pages/plan/plan';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,6 +15,9 @@ export class MyApp {
 
   coursePage = CoursePage;
   loginPage = LoginPage;
+  planPage = PlanPage;
+
+  title = 'teach my plan';
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

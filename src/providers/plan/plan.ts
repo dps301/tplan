@@ -10,8 +10,8 @@ export class PlanProvider {
   constructor(public http: HttpService) {
   }
 
-  addPlan(planNo :number = null, courseNo: number, planName :string, image :string, spot) {
-    return this.http.post(this.resource + '/detail/' + planNo, {courseNo: courseNo, planName: planName, image: image, spot: spot})
+  addPlan(planNo :any = '', courseNo: number, title :string, image :string, spot) {
+    return this.http.post(this.resource + planNo, {courseNo: courseNo, title: title, image: image, spot: spot})
   }
   
   getPlan() {

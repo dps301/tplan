@@ -27,7 +27,7 @@ export class CoursePage {
     );
   }
 
-  goDetail(id, image) {
-    this.navCtrl.push(CourseDatailPage, {"courseNo": id, "image": image})
+  goDetail(id, image, title) {
+    this.navCtrl.push(CourseDatailPage, {"courseNo": id, "image": image, "title": title})
   }
 }

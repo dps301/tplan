@@ -1,7 +1,9 @@
 <ion-content padding>
+    title: <input type="" name="" value="" [(ngModel)]="title">
     <div class="container" [ngClass]="{checked: item.isMust || item.checked}" *ngFor="let item of spotList" style="border: 1px solid;" (click)="item.checked = checkThisOut(item.isMust, item.checked)">
         {{item.name}}
         {{item.content}}
         {{item.isMust? true:false}}
     </div>
+    <button type="" ion-button (click)="addCourseDetail()">저 to the 장</button>
 </ion-content>

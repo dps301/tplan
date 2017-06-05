@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>teach my plan</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
@@ -8,8 +8,8 @@
 </ion-content>
 <ion-footer>
   <ion-navbar>
-    <button type="" (click)="rootPage = coursePage">course</button>
-    <button type="" (click)="rootPage = loginPage">login</button>
-    <button type="">plan</button>
+    <button type="" (click)="rootPage = coursePage; title = 'course'">course</button>
+    <button type="" (click)="rootPage = loginPage; title = 'login'">login</button>
+    <button type="" (click)="rootPage = planPage; title='plan'">plan</button>
   </ion-navbar>
 </ion-footer>
