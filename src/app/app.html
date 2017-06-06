@@ -5,6 +5,10 @@
         <p> {{title}}</p>
       </a>
     </div>
+
+  <button type="" (click)="changeTab(loginPage)">login</button>
+
+  <button type="" (click)="changeTab(joinPage)">join</button>
 </ion-header>
 <ion-content>
   <div class="container">
@@ -14,10 +18,19 @@
   </div>
 </ion-content>
 <ion-footer>
-  <ion-navbar>
-    <button type="" (click)="changeTab(coursePage)">course</button>
-    <button type="" (click)="changeTab(loginPage)">login</button>
-    <button type="" (click)="changeTab(planPage)">plan</button>
-    <button type="" (click)="changeTab(joinPage)">join</button>
-  </ion-navbar>
+  <div class="container-fluid with-bg-2">
+    <div class="subfooter">
+      <div class="row">
+        <div class="col-md-12 no-side-padding">
+          <ul class="list-inline social-list text-center">
+            <li class="facebook social-item"><button type="" (click)="changeTab(coursePage)">course</button></li>
+            <li class="pin social-item"><button type="" (click)="changeTab(planPage)">plan</button></li>
+            <li class="dribbble social-item"><a class="btn-block" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li class="inst social-item"><a class="btn-block" href="#"><i class="fa fa-instagram"></i></a></li>
+            <li class="twitter social-item"><a class="btn-block" href="#"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-footer>
