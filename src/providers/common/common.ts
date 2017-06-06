@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpService } from '../../services/http.service';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CommonProvider {
 
-  constructor(public http: Http) {
+  userResource: string = '/user';
+
+  constructor(public http: HttpService) {
   }
 
+  getUser(id) {
+    return this.http.get(this.userResource, {id: id})
+  }
+  addUser(id, name, nation) {
+    return this.http.post(this.userResource, {id: id, name: name, nation: nation})
+  }
 }

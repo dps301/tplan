@@ -21,7 +21,7 @@ export class LoginPage {
     this.fb.login(['email', 'public_profile'])
     .then(
       (result) => {
-        alert("FACEBOOK:" + JSON.stringify(result));
+        alert(result.authResponse.userID);
       }, 
       (message) => {
         console.log('Error logging in');
@@ -34,7 +34,7 @@ export class LoginPage {
     this.gp.login({
       'webClientId': '121545600444-7p1mtuvtnabbjg79ro57lva24rj2oj16.apps.googleusercontent.com'
     }).then((res) => {
-        alert('res: '+JSON.stringify(res));
+        alert(res.userId);
     }, (err) => {
         alert('err '+err);
     });
