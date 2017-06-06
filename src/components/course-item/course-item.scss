@@ -1,4 +1,8 @@
 course-item {
+    .outer-container {
+        position: relative;
+    }
+
     .container {
         border: 1px solid black;
         margin-bottom: 10px;
