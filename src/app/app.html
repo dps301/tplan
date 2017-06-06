@@ -4,16 +4,10 @@
         <p> {{title}}</p>
       </a>
     </div>
-
-  <button type="" (click)="changeTab(loginPage)">login</button>
-
-  <button type="" (click)="changeTab(joinPage)">join</button>
 </ion-header>
-<ion-content no-padding>
-  <div class="container">
-    <div class="g-pt-90">
-      <ion-nav  [root]="rootPage"></ion-nav>
-    </div>
+<ion-content>
+  <div class="g-pt-90">
+    <ion-nav  [root]="rootPage"></ion-nav>
   </div>
 </ion-content>
 <ion-footer>
