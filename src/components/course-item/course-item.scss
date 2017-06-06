@@ -5,5 +5,13 @@ course-item {
         height: 130px;
         background-size: cover;
         background-position: center center;
+        opacity: 0.3;
+        
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        opacity: 1.0 !important;
     }
 }

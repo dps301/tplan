@@ -1,3 +1,9 @@
 <ion-content padding>
   name: <input type="" name="" value="" [(ngModel)]="name">
+  <ion-item>
+    <ion-label>Countries</ion-label>
+    <ion-select [(ngModel)]="country">
+      <ion-option value="f" *ngFor="let item of countries">{{item.name}}</ion-option>
+    </ion-select>
+  </ion-item>
 </ion-content>
