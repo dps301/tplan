@@ -1,13 +1,11 @@
-<ion-content padding>
-  <ion-item>
-    <ion-label color="primary">Name</ion-label>
-    <ion-input placeholder="Type your name" [(ngModel)]="name"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Countries</ion-label>
-    <ion-select [(ngModel)]="country">
-      <ion-option [value]="item.name" *ngFor="let item of countries">{{item.name}}</ion-option>
-    </ion-select>
-  </ion-item>
-  <button type="" ion-button>Join</button>
-</ion-content>
+<ion-item>
+  <ion-label color="primary">Name</ion-label>
+  <ion-input placeholder="Type your name" [(ngModel)]="name"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Countries</ion-label>
+  <ion-select [(ngModel)]="country">
+    <ion-option [value]="item.name" *ngFor="let item of countries">{{item.name}}</ion-option>
+  </ion-select>
+</ion-item>
+<button type="" ion-button>Join</button>
