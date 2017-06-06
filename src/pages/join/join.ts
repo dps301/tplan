@@ -17,14 +17,15 @@ export class JoinPage {
   }
 
   ionViewDidLoad() {
-    let obj;
-    this.getJSON().subscribe(data => obj=data, error => console.log(error));
-    console.log(obj);
-    
+    this.getJSON();
   }
 
   getJSON() {
-    return this.http.get("./assets/js/countries.json")
-      .map((res:any) => res.json())
+    this.http.get("./assets/js/countries.json")
+    .map((res:any) => res.json())
+    .subscribe(
+      data => this.countries = data, 
+      error => console.log(error)
+    );
   }
 }
