@@ -8,11 +8,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class JoinPage {
 
+  name: string = '';
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad JoinPage');
   }
 
 }
