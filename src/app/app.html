@@ -1,14 +1,14 @@
 <ion-header>
+  <ion-navbar>
     <div class="one-page-header navbar navbar-default navbar-fixed-animate homeapp-header" data-role="navigation">
       <a class="navbar-brand" href="#body">
         <p> {{title}}</p>
       </a>
     </div>
+  </ion-navbar>
 </ion-header>
 <ion-content>
-  <div class="g-pt-90">
-    <ion-nav  [root]="rootPage"></ion-nav>
-  </div>
+  <ion-nav [root]="rootPage"></ion-nav>
 </ion-content>
 <ion-footer no-padding>
   <button type="" (click)="changeTab(loginPage)">login</button>
