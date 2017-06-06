@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PlanProvider } from '../../providers/plan/plan';
 import { CourseProvider } from '../../providers/course/course';
+import * as _ from 'lodash';
 
 @IonicPage()
 @Component({
@@ -18,7 +19,7 @@ export class CourseDatailPage {
 
   chooseNum: number = 0;
   spotList: Array<any> = [];
-  checkedSpotList: Array<any> = []
+  checkedSpotList: Array<any> = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider, private planProvider: PlanProvider) {
   }
@@ -38,15 +39,15 @@ export class CourseDatailPage {
     .subscribe(
       data => {
         this.chooseNum = data.chooseNum;
-        this.spotList = data.list;
+        this.spotList = _.cloneDeep(data.list);
       }
     );
   }
 
   addCourseDetail() {
     for (var index = 0; index < this.spotList.length; index++) {
-      if(this.spotList[index].isMust || this.spotList[index].checked)
-        this.checkedSpotList.push({id: this.spotList[index].id})
+      if(this.spotList[index].checked || this.spotList[index].isMust)
+        this.checkedSpotList.push(this.spotList[index]);
     }
     this.planProvider.addPlan(this.planNo, this.courseNo, this.title, this.image, this.checkedSpotList)
     .subscribe(
@@ -63,6 +64,6 @@ export class CourseDatailPage {
     if(must)
       return ;
     else
-      return !checked;
+      return checked? null : 1;
   }
 }

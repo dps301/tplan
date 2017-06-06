@@ -11,7 +11,7 @@ export class PlanProvider {
   }
 
   addPlan(planNo :any = '', courseNo: number, title :string, image :string, spot) {
-    return this.http.post(this.resource + planNo, {courseNo: courseNo, title: title, image: image, spot: spot})
+    return this.http.post(this.resource + '/' + planNo, {courseNo: courseNo, title: title, image: image, spot: spot})
   }
   
   getPlan() {

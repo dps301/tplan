@@ -18,12 +18,11 @@ import { HttpModule } from "@angular/http";
 import { ServerAddr } from '../services/server.addr';
 import { PlanPageModule } from '../pages/plan/plan.module';
 import { PlanItemComponent } from '../components/plan-item/plan-item';
+import { JoinPageModule } from '../pages/join/join.module';
 
 @NgModule({
   declarations: [
     MyApp,
-    // LoginPage,
-    // CoursePage,
   ],
   imports: [
     BrowserModule,
@@ -32,12 +31,11 @@ import { PlanItemComponent } from '../components/plan-item/plan-item';
     LoginPageModule,
     CoursePageModule,
     PlanPageModule,
+    JoinPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    // LoginPage,
-    // CoursePage
   ],
   providers: [
     StatusBar,
