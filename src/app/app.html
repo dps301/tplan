@@ -17,16 +17,8 @@
   </div>
 </ion-content>
 <ion-footer>
-  <div class="container-fluid with-bg-2">
-    <div class="subfooter">
-      <div class="row">
-        <div class="col-md-12 no-side-padding">
-          <ul class="list-inline social-list text-center">
-            <li class="facebook social-item"><button type="" (click)="changeTab(coursePage)">course</button></li>
-            <li class="pin social-item"><button type="" (click)="changeTab(planPage)">plan</button></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+  <ion-row>
+    <ion-col class="col-sm-1" (click)="changeTab(coursePage)">course</ion-col>
+    <ion-col class="col-sm-1" (click)="changeTab(planPage)">plan</ion-col>
+  </ion-row>
 </ion-footer>
