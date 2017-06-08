@@ -1,1 +1,3 @@
-<plan-item *ngFor="let item of planList" [image]="item.image" [title]="item.title" [upd]="item.upd" (click)="goDetail(item.id, item.title, item.image)"></plan-item>
+<ion-content>
+  <plan-item *ngFor="let item of planList" [image]="item.image" [title]="item.title" [upd]="item.upd" (click)="goDetail(item.id, item.title, item.image)"></plan-item>
+</ion-content>
