@@ -1,6 +1,8 @@
 <div class="col-md-3 short-info short-info-bg-1 equal-height-column margin">
-  <img [src]="image" alt="">
-  <div class="short-info-text">
+  <div class="img-container" [ngStyle]="{'background': 'url(' + image + ')'}">
+    <!--<img [src]="image" alt="">-->
+  </div>
+  <div class="short-info-text" height="80px">
     <h2>{{title}} </h2>
     <p>{{content}} </p>
   </div>

@@ -1,27 +1,11 @@
 course-item {
-    //.outer-container {
-    //    position: relative;
-    //}
-    //
-    //.container {
-    //    margin-bottom: 10px;
-    //    height: 130px;
-    //    background-size: cover;
-    //    background-position: center center;
-    //    opacity: 0.3;
-    //
-    //}
-    //
-    //.content {
-    //    position: absolute;
-    //    top: 0;
-    //    opacity: 1.0 !important;
-    //}
-
-    .container {
-        margin-bottom: 10px;
+    .img-container {
         height: 130px;
-        background-size: cover;
-        background-position: center center;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    .short-info-text{
+        height: 100px;
+        padding: 20px 25px 20px 10px;
     }
 }
