@@ -15,6 +15,7 @@ import { HttpModule } from "@angular/http";
 import { ServerAddr } from '../services/server.addr';
 import { PlanPageModule } from '../pages/plan/plan.module';
 import { JoinPageModule } from '../pages/join/join.module';
+import { LoginSessionService } from '../services/login.session';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { JoinPageModule } from '../pages/join/join.module';
     ServerAddr,
     CourseProvider,
     PlanProvider,
-    CommonProvider
+    CommonProvider,
+    LoginSessionService
   ]
 })
 export class AppModule {}

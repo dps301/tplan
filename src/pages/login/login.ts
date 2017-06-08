@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { CommonProvider } from '../../providers/common/common';
+import { JoinPage } from '../join/join';
 
 @IonicPage()
 @Component({
@@ -46,10 +47,11 @@ export class LoginPage {
     .map(data => data.json())
     .subscribe(
       data => {
-        
+        alert('회원입니다.');
       },
       error => {
-
+        alert('비회원입니다.');
+        this.navCtrl.push(JoinPage, {"id": id});
       }
     );
   }
