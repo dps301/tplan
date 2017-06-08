@@ -1,18 +1,24 @@
 <ion-header>
+  <ion-navbar>
     <div class="one-page-header navbar navbar-default navbar-fixed-animate homeapp-header" data-role="navigation">
       <a class="navbar-brand" href="#body">
-        <p> {{title}}</p>
+        <span>{{title}}</span>
       </a>
     </div>
+  </ion-navbar>
 </ion-header>
 <ion-content>
-  <div class="g-pt-90">
-    <ion-nav  [root]="rootPage"></ion-nav>
-  </div>
+  <ion-nav [root]="rootPage"></ion-nav>
 </ion-content>
-<ion-footer>
-  <ion-row>
-    <ion-col class="col-sm-1" (click)="changeTab(coursePage)">course</ion-col>
-    <ion-col class="col-sm-1" (click)="changeTab(planPage)">plan</ion-col>
-  </ion-row>
+<ion-footer no-padding>
+  <button type="" (click)="changeTab(loginPage)">login</button>
+  <button type="" (click)="changeTab(joinPage)">join</button>
+  <div class="container-fluid with-bg-2" no-padding>
+    <div class="subfooter">
+      <ul class="list-inline social-list text-center">
+        <li class="facebook social-item" (click)="changeTab(coursePage)">course</li>
+        <li class="pin social-item" (click)="changeTab(planPage)">plan</li>
+      </ul>
+    </div>
+  </div>
 </ion-footer>

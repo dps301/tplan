@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
+import { CommonProvider } from '../../providers/common/common';
 
 @IonicPage()
 @Component({
@@ -11,7 +12,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook, private gp: GooglePlus) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook, private gp: GooglePlus, private commonProvider: CommonProvider) {
   }
 
   ionViewDidLoad() {
@@ -21,7 +22,7 @@ export class LoginPage {
     this.fb.login(['email', 'public_profile'])
     .then(
       (result) => {
-        alert(result.authResponse.userID);
+        this.checkIsUser(result.authResponse.userID);
       }, 
       (message) => {
         console.log('Error logging in');
@@ -34,9 +35,22 @@ export class LoginPage {
     this.gp.login({
       'webClientId': '121545600444-7p1mtuvtnabbjg79ro57lva24rj2oj16.apps.googleusercontent.com'
     }).then((res) => {
-        alert(res.userId);
+      this.checkIsUser(res.userId);
     }, (err) => {
         alert('err '+err);
     });
+  }
+
+  checkIsUser(id) {
+    this.commonProvider.getUser(id)
+    .map(data => data.json())
+    .subscribe(
+      data => {
+        
+      },
+      error => {
+
+      }
+    );
   }
 }
