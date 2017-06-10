@@ -6,7 +6,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { CoursePage } from '../pages/course/course';
 import { PlanPage } from '../pages/plan/plan';
-import { JoinPage } from '../pages/join/join';
 import { ReservePage } from '../pages/reserve/reserve';
 
 @Component({
@@ -20,7 +19,6 @@ export class MyApp {
   coursePage = CoursePage;
   loginPage = LoginPage;
   planPage = PlanPage;
-  joinPage = JoinPage;
   reservePage = ReservePage;
 
   title = 'teach my plan';
