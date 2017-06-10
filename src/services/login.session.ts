@@ -18,8 +18,8 @@ export class LoginSessionService {
             }
         );
     }
-    set(id) {
-        this.nativeStorage.setItem('loginSession', {id: id})
+    set(id, name, nation) {
+        this.nativeStorage.setItem('loginSession', {id: id, name: name, nation: nation})
         .then(
             () => {
                 console.log('Stored item! userID');
