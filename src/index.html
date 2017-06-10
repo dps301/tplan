@@ -48,7 +48,7 @@
 
   <!-- CSS Theme -->
   <link rel="stylesheet" href="assets/assets2/css/app.style.css">
-
+  <link rel="stylesheet" href="assets/css/shortcode_timeline1.css">
   <!-- CSS Customization -->
   <link rel="stylesheet" href="assets/assets2/css/custom.css">
 
@@ -82,12 +82,19 @@
   <script src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio-2.0.1.min.js"></script>
   <script src="assets/plugins/modernizr.js"></script>
   <script src="assets/plugins/shhos/shhos.js"></script>
-  <!--<script src="assets/plugins/wow/wow-ini-themes.js"></script>-->
-  <!--<script>
-      $(function() {
-         App.init();
-      });
-  </script>-->
+  <script src="assets/plugins/wow/wow-ini-themes.js"></script>
+  <!-- JS Customization -->
+  <script type="text/javascript" src="assets/js/custom.js"></script>
+  <!-- JS Page Level -->
+  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-4-fw-ns.js"></script>
+  <script>
+		$(function() {
+			App.init();
+			OwlCarousel.initOwlCarousel();
+			ContactForm.initContactForm();
+		});
+	</script>
   <!-- JS Page Level-->
   <script src="assets/js/one.app.js"></script>
   <script src="assets/assets2/js/plugins/pace-loader.js"></script>
