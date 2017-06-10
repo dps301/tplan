@@ -1,7 +1,23 @@
 <h2>
   {{title}}
 </h2>
+<ul class="timeline-v2">
+  <li *ngFor="let item of spotList">
+      <time class="cbp_tmtime" datetime=""><span>4/1/08</span> <span>January</span></time>
+      <i class="cbp_tmicon rounded-x hidden-xs"></i>
+      <div class="cbp_tmlabel">
+          <h2>{{item.spot.title}}</h2>
+          <div class="row">
+              <div class="col-md-4">
+                  <img class="img-responsive" src="assets/img/main/img18.jpg" alt="">
+                  <div class="md-margin-bottom-20"></div>
+              </div>
+          </div>
+      </div>
+  </li>
+</ul>
 <div *ngFor="let item of spotList">
   {{item.spot.title}}
 </div>
 <button type="" ion-button (click)="editPlan()">수정</button>
+                

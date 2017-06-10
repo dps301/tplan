@@ -1,7 +1,30 @@
-title: <input type="" name="" value="" [(ngModel)]="title">
-<div class="container" [ngClass]="{checked: item.isMust || item.checked}" *ngFor="let item of spotList" style="border: 1px solid;" (click)="item.checked = checkThisOut(item.isMust, item.checked)">
-    {{item.name}}
-    {{item.content}}
-    {{item.isMust? true:false}}
+
+<div class="g-heading-v10 g-mb-65 text-center">
+	<h2><em class="block-name"><span>Write title :</span> <input type="" name="" value="" [(ngModel)]="title"></em></h2>
 </div>
+<div class="row">
+    <div class="nopadding col-xs-4 col-md-12" data-toggle="modal" data-target="#myModal" [ngClass]="{checked: item.isMust || item.checked}" *ngFor="let item of spotList"  (click)="item.checked = checkThisOut(item.isMust, item.checked)">
+		<img [src]="item.image" alt="">
+		{{item.name}}
+    </div>
+	<div class="modal" id="myModal" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+					<h4 id="myModalLabel1" class="modal-title">Modal Heading</h4>
+				</div>
+				<div class="modal-body">
+					<h4>Text in a modal</h4>
+					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+				</div>
+				<div class="modal-footer">
+					<button data-dismiss="modal" class="btn-u btn-u-default" type="button">Close</button>
+					<button class="btn-u" type="button">Save changes</button>
+				</div>
+				</div>
+		</div>
+	</div>
+</div>
+                        
 <button type="" ion-button (click)="addCourseDetail()">저 to the 장</button>
