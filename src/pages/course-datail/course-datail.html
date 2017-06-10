@@ -1,6 +1,6 @@
 
-<div class=" text-center">
-	<h2><em class="block-name"><span>Write title :</span> <input type="" name="" value="" [(ngModel)]="title"></em></h2>
+<div class=" g-heading-v10 text-center">
+	<h3><em class="block-name"><span>title :</span> <input type="" name="" value="" [(ngModel)]="title"></em></h3>
 </div>
 <div class="row">
     <div class="nopadding col-xs-4 col-md-12" data-toggle="modal" data-target="#myModal" [ngClass]="{checked: item.isMust || item.checked}" *ngFor="let item of spotList"  (click)="item.checked = checkThisOut(item.isMust, item.checked)">
@@ -14,9 +14,60 @@
 					<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
 					<h4 id="myModalLabel1" class="modal-title">Modal Heading</h4>
 				</div>
-				<div class="modal-body">
-					<h4>Text in a modal</h4>
-					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+				<section id="howitworks">
+		<div class="container-fluid with-bg-2">
+			<div class="container">
+				<div class="how-it-works">
+					<div class="g-heading-v10 g-mb-65 text-center">
+						<h2 class="g-color-white"><em class="block-name"><span class="g-color-white">07.</span> How it works</em> One time used — <strong>Use forever</strong></h2>
+						<p>Integer ut sollicitudin justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+					</div>
+					<!-- Owl Carousel v4-->
+					<div class="owl-carousel-v4 owl-theme">
+						<div class="owl-slider-v4-hiw">
+							<div class="item">
+								<img src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
+								<img src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
+								<h2>usability and progresion</h2>
+								<p>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor. Vivamus a fringilla lorem, vel faucibus ante. Nunc ullamcorper.</p>
+								<a class="btn-u btn-u-lg btn-u-upper rounded-2x" href="#">Learn more</a>
+							</div>
+
+							<div class="item">
+								<img src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
+								<img src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
+								<h2>User Manual</h2>
+								<p>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor. Vivamus a fringilla lorem.</p>
+								<a class="btn-u btn-u-lg btn-u-upper rounded-2x" href="#">Learn more</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Owl Carousel v4 -->
+				</div>
+			</div>
+		</div>
+	</section>
+				<div class="owl-carousel-v1 margin-bottom-50">
+                    <div class="owl-navigation">
+                        <div class="customNavigation">
+                            <a class="owl-btn prev-v1"><i class="fa fa-angle-left"></i></a>
+                            <a class="owl-btn next-v1"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div><!--/navigation-->
+					<div class="owl-slider">
+						<div class="item">
+							<img class="img-responsive" src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
+						</div>
+						<div class="item">
+							<img class="img-responsive" src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
+						</div>
+						<div class="item">
+							<img class="img-responsive" src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
+						</div>
+						<div class="item">
+							<img class="img-responsive" src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
+						</div>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button data-dismiss="modal" class="btn-u btn-u-default" type="button">Close</button>
