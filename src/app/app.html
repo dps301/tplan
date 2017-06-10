@@ -4,7 +4,9 @@
       <div class="navbar-brand" (click)="changeTab(coursePage)">
         <span>{{title}}</span>
       </div>
-      <button type="" (click)="changeTab(loginPage)">login</button>
+      <button type="" (click)="changeTab(loginPage)" *ngIf="!loginSession.id">login</button>
+      <button type="" (click)="loginSession.clear()" *ngIf="loginSession.id">logout</button>
+      {{loginSession.id}}
       <button type="" (click)="changeTab(reservePage)">reserve</button>
     </div>
   </ion-navbar>

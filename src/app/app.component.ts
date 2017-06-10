@@ -7,6 +7,7 @@ import { LoginPage } from '../pages/login/login';
 import { CoursePage } from '../pages/course/course';
 import { PlanPage } from '../pages/plan/plan';
 import { ReservePage } from '../pages/reserve/reserve';
+import { LoginSessionService } from '../services/login.session';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,13 +24,13 @@ export class MyApp {
 
   title = 'teach my plan';
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private loginSession: LoginSessionService) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-
+      
       this.rootPage = this.coursePage;
     });
   }
