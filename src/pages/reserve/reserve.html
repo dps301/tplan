@@ -1,3 +1,10 @@
 <ion-content>
-  <course-item *ngFor="let item of innData" [title]="item.name" [image]="item.image" [content]="item.content"></course-item>
+    <div class="col-md-3 short-info short-info-bg-1 equal-height-column margin" *ngFor="let item of innData">
+        <div class="img-container" [ngStyle]="{'background': 'url(' + item.image + ')'}">
+        </div>
+        <div class="short-info-text" height="80px">
+            <h2>{{item.name}} </h2>
+            <p>{{item.content}} </p>
+        </div>
+    </div>
 </ion-content>

@@ -15,8 +15,13 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 ion-header {
+    .toolbar-background {
+        border: none !important;
+        background: white !important;
+    }
     .one-page-header {
         margin: 0 !important;
+        box-shadow: none !important;
     }
     .navbar-brand {
         padding: 0px !important;
