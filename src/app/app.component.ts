@@ -7,6 +7,7 @@ import { LoginPage } from '../pages/login/login';
 import { CoursePage } from '../pages/course/course';
 import { PlanPage } from '../pages/plan/plan';
 import { JoinPage } from '../pages/join/join';
+import { ReservePage } from '../pages/reserve/reserve';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,12 +15,13 @@ import { JoinPage } from '../pages/join/join';
 export class MyApp {
   @ViewChild(Nav) nav: NavController;
   
-  rootPage :any = CoursePage;
+  rootPage :any;
 
   coursePage = CoursePage;
   loginPage = LoginPage;
   planPage = PlanPage;
   joinPage = JoinPage;
+  reservePage = ReservePage;
 
   title = 'teach my plan';
 
@@ -29,6 +31,8 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+
+      this.rootPage = this.coursePage;
     });
   }
 

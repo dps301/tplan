@@ -16,6 +16,7 @@ import { ServerAddr } from '../services/server.addr';
 import { PlanPageModule } from '../pages/plan/plan.module';
 import { JoinPageModule } from '../pages/join/join.module';
 import { LoginSessionService } from '../services/login.session';
+import { ReservePageModule } from '../pages/reserve/reserve.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LoginSessionService } from '../services/login.session';
     LoginPageModule,
     CoursePageModule,
     PlanPageModule,
-    JoinPageModule
+    JoinPageModule,
+    ReservePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
