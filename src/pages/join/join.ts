@@ -39,7 +39,7 @@ export class JoinPage {
     .subscribe(
       data => {
         console.log('가입완료');
-        this.loginSession.set(this.id);
+        this.loginSession.set(this.id, this.name, this.country);
         alert('Welcome! ' + this.name);
         this.navCtrl.setRoot(CoursePage);
       },

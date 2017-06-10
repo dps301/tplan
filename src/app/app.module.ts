@@ -47,7 +47,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
     PlanProvider,
     CommonProvider,
     LoginSessionService,
-    NativeStorage
+    NativeStorage,
   ]
 })
 export class AppModule {}

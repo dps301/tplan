@@ -4,6 +4,7 @@ import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { CommonProvider } from '../../providers/common/common';
 import { JoinPage } from '../join/join';
+import { LoginSessionService } from '../../services/login.session';
 
 @IonicPage()
 @Component({
@@ -13,7 +14,7 @@ import { JoinPage } from '../join/join';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook, private gp: GooglePlus, private commonProvider: CommonProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook, private gp: GooglePlus, private commonProvider: CommonProvider, private loginSession: LoginSessionService) {
   }
 
   ionViewDidLoad() {
@@ -48,6 +49,8 @@ export class LoginPage {
     .subscribe(
       data => {
         alert('회원입니다.');
+        alert(data.id);
+        this.loginSession.set(data.id, data.name, data.nation);
       },
       error => {
         alert('비회원입니다.');
