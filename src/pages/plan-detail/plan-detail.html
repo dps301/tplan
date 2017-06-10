@@ -1,23 +1,26 @@
-<h2>
-  {{title}}
-</h2>
-<ul class="timeline-v2">
-  <li *ngFor="let item of spotList">
-      <time class="cbp_tmtime" datetime=""><span>4/1/08</span> <span>January</span></time>
-      <i class="cbp_tmicon rounded-x hidden-xs"></i>
-      <div class="cbp_tmlabel">
-          <h2>{{item.spot.title}}</h2>
-          <div class="row">
-              <div class="col-md-4">
-                  <img class="img-responsive" src="assets/img/main/img18.jpg" alt="">
-                  <div class="md-margin-bottom-20"></div>
-              </div>
-          </div>
-      </div>
-  </li>
-</ul>
-<div *ngFor="let item of spotList">
-  {{item.spot.title}}
+<ion-content>
+  <div class=" text-center">
+	<h2><span class="Turquoise">{{title}}</span></h2>
 </div>
-<button type="" ion-button (click)="editPlan()">수정</button>
+  <ul class="timeline-v1 col-xs-11 col-md-12">
+    <li *ngFor="let item of spotList" class="timeline-inverted">
+                        <div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <img class="img-responsive" [src]="item.image[0].image" alt=""/>
+                            </div>
+                            <div class="timeline-footer">
+                                <ul class="list-unstyled list-inline blog-info">
+                                    <li><i class="fa fa-clock-o"></i> March 28, 2014</li>
+                                    <li><i class="fa fa-comments-o"></i> <a href="#">7 Comments</a></li>
+                                </ul>
+                                <a class="likes" href="#"><i class="fa fa-heart"></i>239</a>
+                            </div>
+                        </div>
                 
+                    <li>
+    </li>
+    <li class="clearfix" style="float: none;"></li>
+  </ul>
+  <button type="" ion-button (click)="editPlan()">수정</button>
+</ion-content>
