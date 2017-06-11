@@ -7,7 +7,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'reserve.html',
 })
 export class ReservePage {
-
+  title: string = '';
   location: Array<any> = ['Seoul', 'Busan', 'Jeju','Daegu', 'JeonJu'];
   innData: Array<any> = [
     {
@@ -82,6 +82,7 @@ export class ReservePage {
   }
 
   ionViewDidLoad() {
+    this.title = this.navParams.get('title');
   }
 
 }
