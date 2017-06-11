@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PlanProvider } from '../../providers/plan/plan';
 import { CourseProvider } from '../../providers/course/course';
 import * as _ from 'lodash';
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -10,7 +12,11 @@ import * as _ from 'lodash';
   templateUrl: 'course-datail.html',
 })
 export class CourseDatailPage {
+ @ViewChild(Slides) slides: Slides;
 
+  goToSlide() {
+    this.slides.slideTo(2, 500);
+  }
   courseNo: number = 0;
   planNo: number = null;
   image: string = '';
