@@ -5,6 +5,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
 import { CommonProvider } from '../../providers/common/common';
 import { JoinPage } from '../join/join';
 import { LoginSessionService } from '../../services/login.session';
+import { CoursePage } from '../course/course';
 
 @IonicPage()
 @Component({
@@ -48,12 +49,10 @@ export class LoginPage {
     .map(data => data.json())
     .subscribe(
       data => {
-        alert('회원입니다.');
-        alert(data.id);
-        this.loginSession.set(data.id, data.name, data.nation);
+        this.loginSession.set(data[0].id, data[0].name, data[0].nation);
+        this.navCtrl.setRoot(CoursePage);
       },
       error => {
-        alert('비회원입니다.');
         this.navCtrl.push(JoinPage, {"id": id});
       }
     );

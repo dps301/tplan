@@ -8,8 +8,9 @@
 				  </a>
         </span>
       </div>
-      <button type="" (click)="changeTab(loginPage)">login</button>
-      <button type="" (click)="changeTab(reservePage)">reserve</button>
+      <button type="" (click)="changeTab(loginPage)" *ngIf="!loginSession.id">login</button>
+      <button type="" (click)="loginSession.clear()" *ngIf="loginSession.id">logout</button>
+      {{loginSession.id}}
     </div>
   </ion-navbar>
 </ion-header>

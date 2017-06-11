@@ -3,11 +3,19 @@ import { NativeStorage } from '@ionic-native/native-storage';
 
 @Injectable()
 export class LoginSessionService {
-    constructor(private nativeStorage: NativeStorage) {
+    id: string = '';
+    name: string = '';
+    nation: string = '';
 
+    constructor(private nativeStorage: NativeStorage) {
+        if(this.get()) {
+            this.id = this.get().id;
+            this.name = this.get().name;
+            this.nation = this.get().nation;
+        }
     }
 
-    get() {
+    get(): any {
         this.nativeStorage.getItem('loginSession')
         .then(
             data => {
@@ -23,6 +31,9 @@ export class LoginSessionService {
         .then(
             () => {
                 console.log('Stored item! userID');
+                this.id = this.get().id;
+                this.name = this.get().name;
+                this.nation = this.get().nation;
             },
             error => { 
                 console.error('Error storing item', error);

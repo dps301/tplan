@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PlanProvider } from '../../providers/plan/plan';
 import { CourseDatailPage } from '../course-datail/course-datail';
+import { ReservePage } from '../reserve/reserve';
 
 @IonicPage()
 @Component({
@@ -34,6 +35,10 @@ export class PlanDetailPage {
         this.courseNo = data.json().courseNo;
       }
     );
+  }
+
+  goReserve(title) {
+    this.navCtrl.push(ReservePage, {title: title});
   }
 
   editPlan() {
