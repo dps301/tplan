@@ -2,7 +2,11 @@
   <ion-navbar>
     <div class="one-page-header navbar navbar-default navbar-fixed-animate homeapp-header" data-role="navigation">
       <div class="navbar-brand" (click)="changeTab(coursePage)">
-        <span>{{title}}</span>
+        <span>
+          <a class="navbar-brand" href="#">
+					  <img src="assets/img/logo-dark.png" alt="Logo">
+				  </a>
+        </span>
       </div>
       <button type="" (click)="changeTab(loginPage)">login</button>
       <button type="" (click)="changeTab(reservePage)">reserve</button>
@@ -13,11 +17,25 @@
   <ion-nav [root]="rootPage"></ion-nav>
 </ion-content>
 <ion-footer no-padding>
-  <div class="container-fluid with-bg-2" no-padding>
+  <div class="container-fluid " no-padding>
     <div class="subfooter">
       <ul class="list-inline social-list text-center">
-        <li class=" social-item" (click)="changeTab(coursePage)"><h2 class="g-color-white">Course</h2></li>
-        <li class=" social-item" (click)="changeTab(planPage)"><h2 class="g-color-white">Plan</h2></li>
+        <li class=" social-item" (click)="changeTab(coursePage)">
+          <h5 class="color-sea">
+            <span class="item-box item-box--higher">
+              <span class="item">
+                <span aria-hidden="true" class="icon-travel-056"></span>
+                &nbsp;Course
+              </span>
+            </span>
+            </h5>
+          </li>
+        <li class=" social-item" (click)="changeTab(planPage)"><h5 class="color-sea">
+          <span class="item">
+                <span aria-hidden="true" class="icon-travel-056"></span>
+                &nbsp;Plan
+              </span>
+          </h5></li>
       </ul>
     </div>
   </div>

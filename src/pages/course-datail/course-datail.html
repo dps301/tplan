@@ -1,6 +1,13 @@
-
-<div class=" g-heading-v10 text-center">
-	<h3><em class="block-name"><span>title :</span> <input type="" name="" value="" [(ngModel)]="title"></em></h3>
+<div class="breadcrumbs">
+	<div class="container">
+		<div class=" g-heading-v10 text-center">
+			<h3>
+				<em class="block-name">
+					<span>title :</span> <input type="" name="" value="" [(ngModel)]="title">
+				</em>
+			</h3>
+		</div>
+	</div>
 </div>
 <div class="row">
     <div class="nopadding col-xs-4 col-md-12" data-toggle="modal" data-target="#myModal" [ngClass]="{checked: item.isMust || item.checked}" *ngFor="let item of spotList"  (click)="item.checked = checkThisOut(item.isMust, item.checked)">
