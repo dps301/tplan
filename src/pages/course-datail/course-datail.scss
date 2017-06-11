@@ -10,10 +10,13 @@ page-course-datail {
         padding-left: 5px; 
     }
     .modal-backdrop{
-        position: relative;
+        position: relative !important;
     }
     
     ion-datetime {
         flex: 2;
     }
 }
+.modal-backdrop{
+        position: relative !important;
+    }
