@@ -1,17 +1,4 @@
 <ion-content>
-<<<<<<< HEAD
-  <ion-slides pager="true">
-    <ion-slide>
-      <img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
-    </ion-slide>
-    <ion-slide>
-      <img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
-    </ion-slide>
-    <ion-slide>
-      <img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
-    </ion-slide>
-  </ion-slides>
-=======
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -52,6 +39,5 @@
     <span class="sr-only">Next</span>
   </a>
 </div>  
->>>>>>> 96ecd3149f93ad2f7c0acbfbd2cf16a34bc8c3db
   <course-item *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" (click)="goDetail(item.id, item.image, item.title)"></course-item>
 </ion-content>
