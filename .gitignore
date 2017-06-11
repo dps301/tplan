@@ -23,7 +23,8 @@ tmp/
 temp/
 hooks/
 platforms/
-plugins/
+plugins/cordova-*
+plugins/ionic-*
 plugins/android.json
 plugins/ios.json
 www/
