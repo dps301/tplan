@@ -43,6 +43,12 @@ ion-footer {
             width: 50% !important;
         }
     }
+    border-top:1px solid #4fd2c2;
+    border-right: 1px sloid #4fd2c2;
+    .subfooter .social-item:hover {
+    /* height: 80px; */
+    margin-top: 0px; 
+} 
 }
 ion-footer::before {
     display: none;

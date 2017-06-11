@@ -31,5 +31,7 @@
   </a>
 </div>  
   <button class="btn-u btn-u-sea">btn</button> 
-  <course-item  class="col-xs-12" *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" (click)="goDetail(item.id, item.image, item.title)"></course-item>
+  <div class="col-xs-12 item">
+    <course-item   *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" (click)="goDetail(item.id, item.image, item.title)"></course-item>
+  </div>
 </ion-content>
