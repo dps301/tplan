@@ -1,3 +1,14 @@
 <ion-content>
+  <ion-slides>
+    <ion-slide>
+      <img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
+    </ion-slide>
+  </ion-slides>
   <course-item *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" (click)="goDetail(item.id, item.image, item.title)"></course-item>
 </ion-content>
