@@ -24,12 +24,12 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="row">
-		<div class="nopadding col-xs-4 col-md-12" data-toggle="modal" data-target="#myModal" [ngClass]="{checked: item.isMust || item.checked}" *ngFor="let item of spotList"  (click)="item.checked = checkThisOut(item.isMust, item.checked)">
+		<div class="col-xs-4" data-toggle="modal" data-target="#myModal" [ngClass]="{checked: item.checked}" *ngFor="let item of spotList"  (click)="item.checked = checkThisOut(item.checked)">
 			<img [src]="item.image" alt="">
 			{{item.name}}
 		</div>
+
 		<div class="modal" id="myModal" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -37,24 +37,22 @@
 						<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
 						<h4 id="myModalLabel1" class="modal-title">Modal Heading</h4>
 					</div>
-					<div>
-						<ion-slides>
-							<ion-slide>
-								<img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
-							</ion-slide>
-							<ion-slide>
-								<img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
-							</ion-slide>
-							<ion-slide>
-								<img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
-							</ion-slide>
-						</ion-slides>
-					</div>
+					<ion-slides>
+						<ion-slide>
+							<img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
+						</ion-slide>
+						<ion-slide>
+							<img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
+						</ion-slide>
+						<ion-slide>
+							<img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
+						</ion-slide>
+					</ion-slides>
 					<div class="modal-footer">
 						<button data-dismiss="modal" class="btn-u btn-u-default" type="button">Close</button>
-						<button class="btn-u" type="button">Save changes</button>
+						<button class="btn-u" type="button">Save</button>
 					</div>
-					</div>
+				</div>
 			</div>
 		</div>
 	</div>

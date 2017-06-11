@@ -62,7 +62,7 @@ export class CourseDatailPage {
 
   addCourseDetail() {
     for (var index = 0; index < this.spotList.length; index++) {
-      if(this.spotList[index].checked || this.spotList[index].isMust)
+      if(this.spotList[index].checked)
         this.checkedSpotList.push(this.spotList[index]);
     }
     this.planProvider.addPlan(this.planNo, this.courseNo, this.title, this.image, this.checkedSpotList, this.startDt.length > 10 ? this.startDt.slice(0, 10).replace('T', ' ') : this.startDt, this.endDt.length > 10 ? this.endDt.slice(0, 10).replace('T', ' ') : this.endDt)
@@ -89,10 +89,7 @@ export class CourseDatailPage {
     );
   }
 
-  checkThisOut(must, checked) {
-    if(must)
-      return ;
-    else
-      return checked? null : 1;
+  checkThisOut(checked) {
+    return checked? null : 1;
   }
 }
