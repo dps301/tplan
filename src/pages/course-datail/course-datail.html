@@ -1,81 +1,49 @@
-
-<div class=" g-heading-v10 text-center">
-	<h3><em class="block-name"><span>title :</span> <input type="" name="" value="" [(ngModel)]="title"></em></h3>
-</div>
-<div class="row">
-    <div class="nopadding col-xs-4 col-md-12" data-toggle="modal" data-target="#myModal" [ngClass]="{checked: item.isMust || item.checked}" *ngFor="let item of spotList"  (click)="item.checked = checkThisOut(item.isMust, item.checked)">
-		<img [src]="item.image" alt="">
-		{{item.name}}
-    </div>
-	<div class="modal" id="myModal" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-					<h4 id="myModalLabel1" class="modal-title">Modal Heading</h4>
-				</div>
-				<section id="howitworks">
-		<div class="container-fluid with-bg-2">
-			<div class="container">
-				<div class="how-it-works">
-					<div class="g-heading-v10 g-mb-65 text-center">
-						<h2 class="g-color-white"><em class="block-name"><span class="g-color-white">07.</span> How it works</em> One time used — <strong>Use forever</strong></h2>
-						<p>Integer ut sollicitudin justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-					</div>
-					<!-- Owl Carousel v4-->
-					<div class="owl-carousel-v4 owl-theme">
-						<div class="owl-slider-v4-hiw">
-							<div class="item">
-								<img src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
-								<img src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
-								<h2>usability and progresion</h2>
-								<p>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor. Vivamus a fringilla lorem, vel faucibus ante. Nunc ullamcorper.</p>
-								<a class="btn-u btn-u-lg btn-u-upper rounded-2x" href="#">Learn more</a>
-							</div>
-
-							<div class="item">
-								<img src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
-								<img src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
-								<h2>User Manual</h2>
-								<p>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor. Vivamus a fringilla lorem.</p>
-								<a class="btn-u btn-u-lg btn-u-upper rounded-2x" href="#">Learn more</a>
-							</div>
-						</div>
-					</div>
-					<!-- End Owl Carousel v4 -->
-				</div>
+<ion-content>
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class=" g-heading-v10 text-center">
+				<h3>
+					<em class="block-name">
+						<span>title :</span> <input type="" name="" value="" [(ngModel)]="title">
+					</em>
+				</h3>
 			</div>
 		</div>
-	</section>
-				<div class="owl-carousel-v1 margin-bottom-50">
-                    <div class="owl-navigation">
-                        <div class="customNavigation">
-                            <a class="owl-btn prev-v1"><i class="fa fa-angle-left"></i></a>
-                            <a class="owl-btn next-v1"><i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div><!--/navigation-->
-					<div class="owl-slider">
-						<div class="item">
-							<img class="img-responsive" src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
-						</div>
-						<div class="item">
-							<img class="img-responsive" src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
-						</div>
-						<div class="item">
-							<img class="img-responsive" src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
-						</div>
-						<div class="item">
-							<img class="img-responsive" src="http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg" alt="">
-						</div>
+	</div>
+
+	<div class="row">
+		<div class="nopadding col-xs-4 col-md-12" data-toggle="modal" data-target="#myModal" [ngClass]="{checked: item.isMust || item.checked}" *ngFor="let item of spotList"  (click)="item.checked = checkThisOut(item.isMust, item.checked)">
+			<img [src]="item.image" alt="">
+			{{item.name}}
+		</div>
+		<div class="modal" id="myModal" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+						<h4 id="myModalLabel1" class="modal-title">Modal Heading</h4>
 					</div>
-				</div>
-				<div class="modal-footer">
-					<button data-dismiss="modal" class="btn-u btn-u-default" type="button">Close</button>
-					<button class="btn-u" type="button">Save changes</button>
-				</div>
-				</div>
+					<div>
+						<ion-slides>
+							<ion-slide>
+								<img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
+							</ion-slide>
+							<ion-slide>
+								<img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
+							</ion-slide>
+							<ion-slide>
+								<img src = "http://www.travelhoju.com.au/wp-content/uploads/2015/01/jaju1.jpg">
+							</ion-slide>
+						</ion-slides>
+					</div>
+					<div class="modal-footer">
+						<button data-dismiss="modal" class="btn-u btn-u-default" type="button">Close</button>
+						<button class="btn-u" type="button">Save changes</button>
+					</div>
+					</div>
+			</div>
 		</div>
 	</div>
-</div>
-                        
-<button type="" ion-button (click)="addCourseDetail()">저 to the 장</button>
+							
+	<button type="" ion-button (click)="addCourseDetail()">저 to the 장</button>
+</ion-content>
