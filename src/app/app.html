@@ -18,26 +18,12 @@
   <ion-nav [root]="rootPage"></ion-nav>
 </ion-content>
 <ion-footer no-padding>
-  <div class="container-fluid " no-padding>
-    <div class="subfooter">
-      <ul class="list-inline social-list text-center">
-        <li class="social-item" (click)="changeTab(coursePage)">
-          <h5 class="color-sea">
-            <span class="item">
-              <span aria-hidden="true" class="icon-travel-056"></span>
-              &nbsp;Course
-            </span>
-          </h5>
-        </li>
-        <li class="social-item" (click)="changeTab(planPage)">
-          <h5 class="color-sea">
-            <span class="item">
-              <span aria-hidden="true" class="icon-travel-056"></span>
-              &nbsp;Plan
-            </span>
-          </h5>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <ion-row no-margin>
+    <ion-col col-6 (click)="changeTab(coursePage)" style="border-right: 1px #4fd2c2 solid;">
+      <span aria-hidden="true" class="icon-travel-056"></span>&nbsp;Course
+    </ion-col>
+    <ion-col col-6 (click)="changeTab(planPage)" style="border-left: 1px #4fd2c2 solid;">
+      <span aria-hidden="true" class="icon-travel-056"></span>&nbsp;Plan
+    </ion-col>
+  </ion-row>
 </ion-footer>
