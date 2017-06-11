@@ -1,4 +1,18 @@
 <ion-content>
+	<ion-row>
+		<ion-col col-6 no-padding>
+			<ion-item>
+				<ion-label no-padding no-margin>Start</ion-label>
+				<ion-datetime displayFormat="YYYY/MM/DD" [(ngModel)]="startDt"></ion-datetime>
+			</ion-item>
+		</ion-col>
+		<ion-col col-6 no-padding>
+			<ion-item>
+				<ion-label no-padding no-margin>End</ion-label>
+				<ion-datetime displayFormat="YYYY/MM/DD" [(ngModel)]="endDt"></ion-datetime>
+			</ion-item>
+		</ion-col>
+	</ion-row>
 	<div class="breadcrumbs">
 		<div class="container">
 			<div class=" g-heading-v10 text-center">
@@ -46,4 +60,5 @@
 	</div>
 							
 	<button type="" ion-button (click)="addCourseDetail()">저 to the 장</button>
+	<button type="" ion-button (click)="deletePlan()" *ngIf="planNo">삭 to the 제</button>
 </ion-content>

@@ -9,8 +9,11 @@ page-course-datail {
         padding-right: 5px; 
         padding-left: 5px; 
     }
-    
-}
-.modal-backdrop{
+    .modal-backdrop{
         position: relative;
     }
+    
+    ion-datetime {
+        flex: 2;
+    }
+}

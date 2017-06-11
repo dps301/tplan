@@ -27,6 +27,9 @@ export class CourseDatailPage {
   spotList: Array<any> = [];
   checkedSpotList: Array<any> = [];
 
+  startDt: any = null;
+  endDt: any = null;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider, private planProvider: PlanProvider) {
   }
 
@@ -35,6 +38,9 @@ export class CourseDatailPage {
     this.image = this.navParams.get('image');
     this.title = this.navParams.get('title');
     this.planNo = this.navParams.get('planNo');
+
+    this.startDt = new Date().toISOString();
+    this.endDt = new Date().toISOString();
 
     this.getCourseDetail();
   }
@@ -45,6 +51,10 @@ export class CourseDatailPage {
     .subscribe(
       data => {
         this.chooseNum = data.chooseNum;
+        if(this.planNo) {
+          this.startDt = data.startDt;
+          this.endDt = data.endDt;
+        }
         this.spotList = _.cloneDeep(data.list);
       }
     );
@@ -55,10 +65,23 @@ export class CourseDatailPage {
       if(this.spotList[index].checked || this.spotList[index].isMust)
         this.checkedSpotList.push(this.spotList[index]);
     }
-    this.planProvider.addPlan(this.planNo, this.courseNo, this.title, this.image, this.checkedSpotList)
+    this.planProvider.addPlan(this.planNo, this.courseNo, this.title, this.image, this.checkedSpotList, this.startDt.length > 10 ? this.startDt.slice(0, 10).replace('T', ' ') : this.startDt, this.endDt.length > 10 ? this.endDt.slice(0, 10).replace('T', ' ') : this.endDt)
     .subscribe(
       data => {
         console.log(data);
+        alert('Plan saved!');
+      },
+      error => {
+
+      }
+    );
+  }
+
+  deletePlan() {
+    this.planProvider.deletePlan(this.planNo)
+    .subscribe(
+      data => {
+        alert('Deleted!');
       },
       error => {
 
