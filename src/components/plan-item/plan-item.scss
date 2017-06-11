@@ -1,8 +1,12 @@
 plan-item {
-    .container {
-        margin-bottom: 10px;
+    .title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    img {
+        object-fit: cover;
+        width: 130px;
         height: 130px;
-        background-size: cover;
-        background-position: center center;
     }
 }

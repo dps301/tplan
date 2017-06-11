@@ -6,7 +6,8 @@ import { Component, Input } from '@angular/core';
 })
 export class PlanItemComponent {
   @Input() title: string = '';
-  @Input() upd: string = '';
+  @Input() startDt: string = '';
+  @Input() endDt: string = '';
   @Input() image: string = '';
 
   constructor() {

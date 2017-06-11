@@ -1,8 +1,14 @@
-<div class="container" padding [ngStyle]="{'background-image': 'url(' + image + ')'}">
-  <div>
-    {{title}}
-  </div>
-  <div>
-    {{upd}} 
-  </div>
-</div>
+<ion-row padding>
+  <ion-col col-4>
+    <img [src]="image" alt="">
+  </ion-col>
+  <ion-col col-8>
+    <div class="title">
+      {{title}}
+    </div>
+    <div class="date">
+      {{startDt}} ~ {{endDt}} 
+    </div>
+  </ion-col>
+</ion-row>
+<hr no-margin/>
