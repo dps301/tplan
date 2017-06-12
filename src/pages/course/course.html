@@ -10,7 +10,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="https://img-wishbeen.akamaized.net/plan/1446967146602_IMG_9288.JPG" alt="...">
+      <img src="../assets/img/b.png" alt="...">
     </div>
     <div class="item">
       <img src="https://img-wishbeen.akamaized.net/plan/1446967146602_IMG_9288.JPG" alt="...">
@@ -30,7 +30,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>  
-  <button class="btn-u btn-u-sea">btn</button> 
+  <div class="filter">
+    filter
+  </div>
   <div class="col-xs-12 item">
     <course-item   *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" (click)="goDetail(item.id, item.image, item.title)"></course-item>
   </div>

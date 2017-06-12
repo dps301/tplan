@@ -1,9 +1,14 @@
 page-course {
+    
     .carousel-control {
         background-image: none !important;
     }
     .item{
         padding-right: 0px;
         padding-left: 0px;
+    }
+    .filter{
+        width: 100%;
+        background-color: #44D887; 
     }
 }
