@@ -10,6 +10,7 @@ import { CourseProvider } from '../../providers/course/course';
 })
 export class CoursePage {
   courses: Array<any> = [];
+  filterOn: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider) {
   }

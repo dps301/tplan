@@ -3,6 +3,19 @@ page-course {
     .carousel-control {
         background-image: none !important;
     }
+    .carousel {
+        position: relative;
+        transition-property: opacity, max-height;
+        transition-duration: 1s, 1s;
+        opacity: 1;
+        max-height: 35%;
+    }
+    .carousel.animation-hide {
+        transition-property: opacity, max-height;
+        transition-duration: 1s, 1s;
+        opacity: 0;
+        max-height: 0px;
+    }
     .item{
         padding-right: 0px;
         padding-left: 0px;
