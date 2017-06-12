@@ -5,13 +5,13 @@ page-course {
     .carousel {
         position: relative;
         transition-property: opacity, max-height;
-        transition-duration: 0.7s, 1s;
+        transition-duration: 1s, 1s;
         opacity: 1;
-        max-height: auto;
+        max-height: 35%;
     }
     .carousel.animation-hide {
         transition-property: opacity, max-height;
-        transition-duration: 0.5s, 1s;
+        transition-duration: 1s, 1s;
         opacity: 0;
         max-height: 0px;
     }
