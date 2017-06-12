@@ -14,6 +14,10 @@ export class CourseProvider {
     return this.http.post(this.resource)
   }
 
+  getSpotImage(spotNo) {
+    return this.http.get('/spot/image', {spotNo: spotNo})
+  }
+
   getCourseDetail(courseNo :number, planNo :number = null, day :number = 3) {
     return this.http.get(this.resource + '/detail', {courseNo: courseNo, planNo: planNo, day: day})
   }

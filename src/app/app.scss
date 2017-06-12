@@ -44,11 +44,23 @@ ion-footer {
         }
     }
     border-top:1px solid #4fd2c2;
-    border-right: 1px sloid #4fd2c2;
+
     .subfooter .social-item:hover {
         margin-top: 0px !important; 
         height: 65px;
     } 
+
+    ion-row {
+        height: 65px;
+
+        ion-col {
+            align-self: center;
+            text-align: center;
+            color: #4fd2c2;
+            font-size: 1.8rem;
+            line-height: 1.2;
+        }
+    }
 }
 ion-footer::before {
     display: none;

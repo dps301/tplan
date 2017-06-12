@@ -9,14 +9,43 @@ page-course-datail {
         padding-right: 5px; 
         padding-left: 5px; 
     }
-    .modal-backdrop{
-        position: relative !important;
-    }
     
     ion-datetime {
         flex: 2;
     }
-}
-.modal-backdrop{
-        position: relative !important;
+    .carousel-control {
+        background-image: none !important;
     }
+
+    .spot-main-image {
+        position: relative;
+
+        button {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            z-index: 2;
+        }
+
+        .spot-checked {
+            position: absolute;
+            display: flex;
+            top: 0%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0.6;
+
+            ion-icon {
+                margin: auto;
+                color: white;
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+.modal-backdrop {
+    display: none !important;
+}
