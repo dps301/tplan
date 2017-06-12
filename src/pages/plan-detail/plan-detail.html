@@ -14,9 +14,24 @@
     <li *ngFor="let item of spotList; let i = index;" class="timeline-inverted">
         <button text-center type="" (click)="goReserve(item.spot.title)" *ngIf="i != 0">Find Hotel</button>
         <div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
-        <div class="timeline-panel box-shadow shadow-effect-3">
+        <div class="timeline-panel">
             <div class="timeline-heading">
                 <img class="img-responsive" [src]="item.image[0].image" alt=""/>
+                    <div class="profile-blog blog-border">
+                    <img class="rounded-x" [src]="item.image[0].image" alt="">
+                    <div class="name-location">
+                        <strong>Mikel Andrews</strong>
+                        <span><i class="fa fa-map-marker"></i><a href="#">California,</a> <a href="#">US</a></span>
+                    </div>
+                    <div class="clearfix margin-bottom-20"></div>
+                    <p>Donec non dignissim eros. Mauris faucibus turpis volutpat sagittis rhoncus. Pellentesque et rhoncus sapien, sed ullamcorper justo.</p>
+                    <hr>
+                    <ul class="list-inline share-list">
+                        <li><i class="fa fa-bell"></i><a href="#">12 Notifications</a></li>
+                        <li><i class="fa fa-group"></i><a href="#">54 Followers</a></li>
+                        <li><i class="fa fa-twitter"></i><a href="#">Retweet</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="timeline-footer">
                 <ul class="list-unstyled list-inline blog-info">

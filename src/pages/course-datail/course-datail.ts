@@ -30,6 +30,9 @@ export class CourseDatailPage {
   startDt: any = null;
   endDt: any = null;
 
+  selectedIdx: number = -1;
+  selectedSpotImage: Array<any> = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider, private planProvider: PlanProvider) {
   }
 
@@ -82,6 +85,18 @@ export class CourseDatailPage {
     .subscribe(
       data => {
         alert('Deleted!');
+      },
+      error => {
+
+      }
+    );
+  }
+
+  getSpotImage() {
+    this.courseProvider.getSpotImage(this.spotList[this.selectedIdx].id)
+    .subscribe(
+      data => {
+        this.selectedSpotImage = data.json();
       },
       error => {
 
