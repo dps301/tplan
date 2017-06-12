@@ -8,9 +8,11 @@
 				  </a>
         </span>
       </div>
-      <button type="" (click)="changeTab(loginPage)" *ngIf="!loginSession.id">login</button>
-      <button type="" (click)="loginSession.clear()" *ngIf="loginSession.id">logout</button>
-      {{loginSession.id}}
+      <span class="pull-right item"> 
+        <span aria-hidden="true" class="icon-login" style="font-size: 30px;" (click)="changeTab(loginPage)" *ngIf="!loginSession.id"></span>
+        <span aria-hidden="true" class="icon-logout" style="font-size: 30px;" type="" (click)="loginSession.clear()" *ngIf="loginSession.id"></span>
+        {{loginSession.id}}
+      </span>
     </div>
   </ion-navbar>
 </ion-header>
