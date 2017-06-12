@@ -58,9 +58,6 @@
 								<img [src]="item.image" alt="...">
 							</div>
 						</div>
-						<div *ngIf="selectedIdx != -1">
-							{{spotList[selectedIdx].content}}
-						</div>
 
 						<!-- Controls -->
 						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -71,7 +68,11 @@
 							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 							<span class="sr-only">Next</span>
 						</a>
-						</div> 
+					</div>
+						
+					<div *ngIf="selectedIdx != -1">
+						{{spotList[selectedIdx].content}}
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
