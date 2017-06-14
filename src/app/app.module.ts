@@ -18,6 +18,7 @@ import { JoinPageModule } from '../pages/join/join.module';
 import { LoginSessionService } from '../services/login.session';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { VariableService } from '../services/variable';
+import { Square } from '../directives/square/square';
 
 @NgModule({
   declarations: [

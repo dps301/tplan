@@ -12,6 +12,7 @@ export class CourseItemComponent {
   @Input('image') image: string;
   @Input('content') content: number;
   @Input('like') like: number;
+  @Input('idx') idx: number;
 
   constructor() {
   }

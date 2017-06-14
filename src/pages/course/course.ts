@@ -33,4 +33,8 @@ export class CoursePage {
   goDetail(id, image, title) {
     this.navCtrl.push(CourseDatailPage, {"courseNo": id, "image": image, "title": title, "planNo": ''});
   }
+
+  swipeTo(ev) {
+    // console.log(ev.direction);
+  }
 }

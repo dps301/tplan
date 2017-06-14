@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content style="background: #e6e7e8;">
   <div id="carousel-example-generic" class="carousel slide" [ngClass]="{'animation-hide': filterOn}" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -8,7 +8,7 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox" (swipe)="swipeTo($event)">
       <div class="item active">
         <img src="https://img-wishbeen.akamaized.net/plan/1446967146602_IMG_9288.JPG" alt="...">
       </div>
@@ -67,5 +67,9 @@
       </section>
     </fieldset>
   </div>
-  <course-item *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" (click)="goDetail(item.id, item.image, item.title)"></course-item>
+  <div class="row">
+    <div class="col-xs-6" *ngFor="let item of courses; let idx = index" no-padding>
+      <course-item [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" [idx]="idx" (click)="goDetail(item.id, item.image, item.title)"></course-item>
+    </div>
+  </div>
 </ion-content>
