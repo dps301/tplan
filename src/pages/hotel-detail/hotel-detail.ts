@@ -14,11 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HotelDetailPage {
 
+  name: string = '';
+  location: string = '';
+  image: string = '';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HotelDetailPage');
+    this.image = this.navParams.get('image');
+    this.name = this.navParams.get('name');
+    this.location = this.navParams.get('location');
   }
 
 }

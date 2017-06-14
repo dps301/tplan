@@ -1,11 +1,35 @@
 <ion-content class="bbg">
-    <h3>{{title}} 주변에 있는 호텔</h3>
-    <div class="col-md-3 short-info short-info-bg-1 equal-height-column margin" *ngFor="let item of innData">
-        <div class="img-container" [ngStyle]="{'background': 'url(' + item.image + ')'}">
-        </div>
-        <div class="short-info-text" height="80px">
-            <h2>{{item.name}} </h2>
-            <p>{{item.content}} </p>
-        </div>
+    <!--<h3>{{title}} 주변에 있는 호텔</h3>-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img [src]="image" alt="...">
+      </div>
     </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>  
+  <button class="hdb text-center"> 예약하기
+  </button>  
+  <button class="hdb text-center"> 문의하기
+  </button>
+  <br>
+  <div class="loca">{{location}}</div>
+  map
 </ion-content>
