@@ -1,17 +1,18 @@
 <ion-content class="bbg">
     <!--<h3>{{title}} 주변에 있는 호텔</h3>-->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <img [src]="image" alt="...">
+      </div>
+      <div class="title">{{name}}
+      </div>
+      <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i> 4.0
+      </div>
+      <div class="imgg">
+        <img src="../assets/img/wowicon.png">
       </div>
     </div>
 

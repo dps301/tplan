@@ -1,7 +1,6 @@
 
 <ion-content class="bbg">
-  <h3 class="tag">{{title}} 주변에 있는 호텔</h3>
-  <hr class="hrtag">
+  <h3 class="tag text-center">The Hotel near by {{title}} </h3>
   <ng-container *ngFor="let item of innData">
     <ion-row class="tag ion" (click)="goDetail(item.name, item.location, item.image)" >
       <ion-col col-5>
@@ -13,6 +12,5 @@
         <div><i class="fa fa-star-o"></i> 5.0 </div>
       </ion-col>
     </ion-row>
-    <hr class="hrtag">
   </ng-container>
 </ion-content>

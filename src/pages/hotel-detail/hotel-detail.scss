@@ -16,4 +16,28 @@ page-hotel-detail {
     .loca{
         color: #808285;
     }
+    .title{
+        position: absolute;
+        left:10%;
+        top: 70%;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .star{
+        position: absolute;
+        left:10%;
+        top: 80%;
+        color: white;
+        font-size: 17px;
+    }
+    .item{
+        position: relative;
+    }
+    .imgg{
+        position: absolute;
+        right:5%;
+        top: 5%;
+        width: 50px;
+    }
 }
