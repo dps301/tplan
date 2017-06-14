@@ -49,6 +49,6 @@ export class CoursePage {
   }
 
   attrChanges(value, idx) {
-    console.log(value + idx);
+    console.log(JSON.stringify(value) + idx);
   }
 }
