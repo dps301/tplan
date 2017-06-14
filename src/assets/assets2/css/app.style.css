@@ -13,7 +13,7 @@ li a {
 }
 
 a {
-  color: #44D887;
+  color: #41b5a7;
   text-decoration: none;
 }
 a,
@@ -26,18 +26,18 @@ a:focus {
   text-decoration: none;
 }
 a:hover {
-  color: #44D887;
+  color: #41b5a7;
   text-decoration: underline;
 }
 
 /* Default highlight color */
 ::-moz-selection {
   color: #fff;
-  background: #44D887;
+  background: #41b5a7;
 }
 ::selection {
   color: #fff;
-  background: #44D887;
+  background: #41b5a7;
 }
 
 .btn-u-upper {
@@ -82,8 +82,8 @@ a:hover {
 	}
 }
 
-.g-color-default { color: #44D887;}
-.g-bg-default { background: #44D887;}
+.g-color-default { color: #41b5a7;}
+.g-bg-default { background: #41b5a7;}
 
 .g-color-white { color: #fff !important;}
 
@@ -289,7 +289,7 @@ a:hover {
 }
 
 .container-fluid.with-bg-2 {
-	background: #44D887;
+	background: #41b5a7;
 }
 
 /* --------------------------------------------------
@@ -350,7 +350,7 @@ a:hover {
 }
 
 .homeapp-header.one-page-header .navbar-nav > li > a:hover {
-	color: #44D887;
+	color: #41b5a7;
 }
 
 .homeapp-header.one-page-header .navbar-nav > .active > a,
@@ -358,14 +358,14 @@ a:hover {
 .homeapp-header.one-page-header .navbar-nav > .active > a:focus {
     z-index: 1;
     background: transparent none repeat scroll 0% 0%;
-    color: #44D887 !important;
+    color: #41b5a7 !important;
 }
 
 /* Designing the button */
 .homeapp-header.one-page-header .navbar-nav > li > a.btn-u {
 	margin-left: 13px;
 	color: #fff;
-	background: #44D887;
+	background: #41b5a7;
 }
 .homeapp-header.one-page-header .navbar-nav > li > a.btn-u:hover,
 .homeapp-header.one-page-header .navbar-nav > li > a.btn-u:focus,
@@ -499,7 +499,7 @@ a:hover {
 }
 
 .btn-u.btn-banner.btn-apple {
-	background: #44D887;
+	background: #41b5a7;
 	margin-right: 30px;
 }
 
@@ -549,7 +549,7 @@ a:hover {
 }
 
 .short-info-bg-1 {
-	background: #44D887;
+	background: #41b5a7;
 }
 
 .short-info-bg-2 {
@@ -640,7 +640,7 @@ a:hover {
 /* Designing the play button */
 .our-presentation .btn-u.btn-play {
 	border-radius: 50%;
-	background: #44D887;
+	background: #41b5a7;
 	font-size: 12px;
 	padding: 28px 33px;
 	/* transition: all 0.2s ease-in; */
@@ -668,7 +668,7 @@ a:hover {
     width: 270px;
     min-height: 480px;
     margin: 0 auto 15px;
-    background: #44D887;
+    background: #41b5a7;
 }
 
 /* Adding the plus sign */
@@ -708,7 +708,7 @@ a:hover {
 
 .whats-new .owl-theme .owl-controls .owl-page.active span,
 .whats-new .owl-theme .owl-controls.clickable .owl-page:hover span {
-   	background: #44D887 none repeat scroll 0% 0%;
+   	background: #41b5a7 none repeat scroll 0% 0%;
 }
 
 /* --------------------------------------------------
@@ -745,8 +745,8 @@ a:hover {
 }
 
 .features-text .feature-shortinfo-icon .fa {
-	color: #44D887;
-	border: 1px solid #44D887;
+	color: #41b5a7;
+	border: 1px solid #41b5a7;
 	border-radius: 50%;
 	padding: 22px;
 }
@@ -811,7 +811,7 @@ a:hover {
 .why-ourapp-text .panel-default {
     border: none;
     box-shadow: none;
-    background: #44D887;
+    background: #41b5a7;
 }
 
 /* Giving the second background color of the tab content */
@@ -833,7 +833,7 @@ a:hover {
 
 /* Changing the default color and background color of the heading  */
 .why-ourapp-text .acc-v1 .panel-heading a {
-    background: #44D887;
+    background: #41b5a7;
     text-transform: uppercase;
     color: #fff;
     font-weight: bold;
@@ -969,7 +969,7 @@ a:hover {
 /* Owl Controls */
 .how-it-works .owl-theme .owl-controls .owl-buttons div {
   padding: 14px 17px;
-  color: #44D887;
+  color: #41b5a7;
   background: #fff;
   font-size: 10px;
   border-radius: 50%;
@@ -1027,8 +1027,8 @@ a:hover {
 .app-screens .cube-portfolio #filters-container .cbp-filter-item-active {
     background: transparent none repeat scroll 0% 0%;
     border: none;
-    border-bottom: 1px solid #44D887;
-    color: #44D887;
+    border-bottom: 1px solid #41b5a7;
+    color: #41b5a7;
 }
 
 .app-screens .cbp-l-filters-button .cbp-filter-item {
@@ -1045,7 +1045,7 @@ a:hover {
 }
 
 .app-screens .cbp-l-filters-button .cbp-filter-item:hover {
-	color: #44D887;
+	color: #41b5a7;
 }
 
 .app-screens .cbp-caption-fadeIn .cbp-caption-activeWrap {
@@ -1089,7 +1089,7 @@ a:hover {
 }
 
 .subscribe .input-group .btn-u.btn-sub {
-	background: #44D887;
+	background: #41b5a7;
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 11px;
@@ -1145,8 +1145,8 @@ a:hover {
 .tab-v1 .nav-tabs > .active > a:focus {
     background: transparent none repeat scroll 0% 0%;
     border: none;
-    border-bottom: 1px solid #44D887;
-    color: #44D887;
+    border-bottom: 1px solid #41b5a7;
+    color: #41b5a7;
 }
 
 /* Tab-in design */
@@ -1169,7 +1169,7 @@ a:hover {
 }
 
 .faq .tab-in a {
-	color: #44D887;
+	color: #41b5a7;
 	text-transform: uppercase;
 	font-size: 11px;
 	font-weight: bold;

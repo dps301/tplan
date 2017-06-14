@@ -8,7 +8,7 @@ page-course {
         transition-property: opacity, max-height;
         transition-duration: 1s, 1s;
         opacity: 1;
-        max-height: 35%;
+        max-height: 40%;
     }
     .carousel.animation-hide {
         transition-property: opacity, max-height;
@@ -22,6 +22,11 @@ page-course {
     }
     .filter{
         width: 100%;
-        background-color: #4fd2c2; 
+        background-color: #4FD2C2; 
+        height: 70px;
+        .filterWord{
+            padding-top: 25px;
+            color: white;
+        }
     }
 }
