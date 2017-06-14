@@ -1,0 +1,43 @@
+page-hotel-detail {
+    .bbg{
+            background-color: #E6E7E8;
+    }
+    .hdb {
+        border: 1px solid #4FD2C2;
+        background-color: white;
+        width: 43%;
+        font-size: 20px;
+        height: 70px;
+        margin-right: 10px;    
+        margin-left: 10px; 
+        margin-top: 7px;   
+        color: #4FD2C2;
+    }
+    .loca{
+        color: #808285;
+    }
+    .title{
+        position: absolute;
+        left:10%;
+        top: 70%;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .star{
+        position: absolute;
+        left:10%;
+        top: 80%;
+        color: white;
+        font-size: 17px;
+    }
+    .item{
+        position: relative;
+    }
+    .imgg{
+        position: absolute;
+        right:5%;
+        top: 5%;
+        width: 50px;
+    }
+}
