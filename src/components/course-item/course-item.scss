@@ -1,16 +1,15 @@
 course-item {
-    .container {
+    .item-container {
         position: relative;
-        width: 50%;
-        height: 0px;
-        padding-bottom: 50%;
         background-size: cover !important;
     }
+
     .title {
         position: absolute;
-        bottom: 7px;
-        right: 6px;
+        right: 5px;
+        bottom: 3px;
         color: white;
-        font-size: 17px;
+        font-size: 16px;
+        font-weight: 500;
     }
 }

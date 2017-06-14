@@ -1,5 +1,6 @@
-<div class="container" no-margin [ngStyle]="{'background': 'url(' + image + ')'}">
+<div class="item-container" square no-margin [ngStyle]="{'background': 'url(' + image + ')', 'margin': idx % 2 == 0? '0px 6px 9px 18px' : '0px 18px 9px 6px'}">
   <div class="title">
+    {{idx % 2}}
     {{title}}
   </div>
 </div>
