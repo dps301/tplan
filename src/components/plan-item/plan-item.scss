@@ -8,6 +8,21 @@ plan-item {
         object-fit: cover;
         width: 130px;
         height: 130px;
+
+    }
+    .boxcon{
+        margin-bottom:20px; 
+    }
+    .boxbg{
+        position: relative;
+    }
+    .ganzi{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background: rgba(1,1,1,0.3);
     }
     
 }
