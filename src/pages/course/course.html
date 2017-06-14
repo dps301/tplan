@@ -1,22 +1,17 @@
 <ion-content style="background: #e6e7e8;">
   <div id="carousel-example-generic" class="carousel slide" [ngClass]="{'animation-hide': filterOn}" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
+    <!--<ol class="carousel-indicators">
+      <li *ngFor="let item of randomCourses; let idx = index; let isFirst = first" data-target="#carousel-example-generic" [attr.data-slide-to]="idx" [ngClass]="{'active': isFirst}"></li>
+    </ol>-->
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" (swipe)="swipeTo($event)">
-      <div class="item active">
-        <img src="https://img-wishbeen.akamaized.net/plan/1446967146602_IMG_9288.JPG" alt="...">
-      </div>
-      <div class="item">
-        <img src="https://img-wishbeen.akamaized.net/plan/1446967146602_IMG_9288.JPG" alt="...">
-      </div>
-      <div class="item">
-        <img src="https://img-wishbeen.akamaized.net/plan/1446967146602_IMG_9288.JPG" alt="...">
+      <div class="item" *ngFor="let item of randomCourses; let isFirst = first" [ngClass]="{'active': isFirst}">
+        <div class="title">
+          {{item.title}}
+        </div>
+        <img [src]="item.image" alt="...">
       </div>
     </div>
 
@@ -46,23 +41,11 @@
         </label>
       </section>
       <section>
-        <label class="label">Columned checkboxes</label>
+        <label class="label">Themes</label>
           <div class="row">
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Alexandra</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Alice</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anastasia</label>
-              </div>
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Avelina</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Basilia</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Beatrice</label>
-              </div>
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Cassandra</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Clemencia</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Desiderata</label>
-              </div>
+            <div class="col-xs-6" *ngFor="let item of variable.attrs; let idx = index">
+              <label class="checkbox"><input type="checkbox" name="checkbox" (change)="attrChanges($event.target.value, idx)"><i></i>{{item.name}}</label>
+            </div>
           </div>
       </section>
     </fieldset>

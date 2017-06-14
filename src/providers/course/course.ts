@@ -15,6 +15,10 @@ export class CourseProvider {
     return this.http.get(this.city_resource)
   }
 
+  getAttr() {
+    return this.http.get(this.city_resource + '/attr')
+  }
+
   getCourse(cityNo = null, attr = null) {
     return this.http.post(this.resource, {cityNo: cityNo, attr: attr})
   }
