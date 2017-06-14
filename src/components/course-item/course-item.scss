@@ -4,8 +4,15 @@ course-item {
         background-size: cover !important;
         background-position: center !important;
     }
+    .short-info {
+        padding: 5px 5px; 
+    }
     .short-info-text{
         height: 80px;
         padding: 0px 15px 20px 10px;
+    }
+    .bobo{
+        // border-right: 1px solid; 
+        // border-left: 1px solid; 
     }
 }

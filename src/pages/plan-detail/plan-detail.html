@@ -6,42 +6,43 @@
 				<em class="block-name">
 					<span>{{title}}</span> 
 				</em>
+                <button class="pull-right" type="" ion-button (click)="editPlan()">수정</button>
 			</h3>
 		</div>
 	</div>
 </div>
+<div class="con">
   <ul class="timeline-v1 col-xs-11 col-md-12">
     <li *ngFor="let item of spotList; let i = index;" class="timeline-inverted">
-        <button text-center type="" (click)="goReserve(item.spot.title)" *ngIf="i != 0">Find Hotel</button>
         <div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
         <div class="timeline-panel">
             <div class="timeline-heading">
-                <img class="img-responsive" [src]="item.image[0].image" alt=""/>
-                    <div class="profile-blog blog-border">
-                    <img class="rounded-x" [src]="item.image[0].image" alt="">
-                    <div class="name-location">
-                        <strong>Mikel Andrews</strong>
-                        <span><i class="fa fa-map-marker"></i><a href="#">California,</a> <a href="#">US</a></span>
+                <!--<img class="" [src]="item.image[0].image" alt="" width="10px" height="10px"/>-->
+                <div class="funny-boxes funny-boxes-top-sea">
+                    <div class="row">
+                        <div class="col-xs-6 funny-boxes-img">
+                            <img class="img-responsive" [src]="item.image[0].image" alt="">
+                        </div>
+                        <div class="col-xs-6">
+                            <h3>{{item.spot.title}} </h3>
+                        </div>
                     </div>
-                    <div class="clearfix margin-bottom-20"></div>
-                    <p>Donec non dignissim eros. Mauris faucibus turpis volutpat sagittis rhoncus. Pellentesque et rhoncus sapien, sed ullamcorper justo.</p>
-                    <hr>
-                    <ul class="list-inline share-list">
-                        <li><i class="fa fa-bell"></i><a href="#">12 Notifications</a></li>
-                        <li><i class="fa fa-group"></i><a href="#">54 Followers</a></li>
-                        <li><i class="fa fa-twitter"></i><a href="#">Retweet</a></li>
-                    </ul>
                 </div>
             </div>
             <div class="timeline-footer">
                 <ul class="list-unstyled list-inline blog-info">
-                    <li><i class="fa fa-clock-o"></i> March 28, 2014</li>
+                    <li><i class="fa fa-clock-o"></i> 07:00~15:00</li>
                     <li><i class="fa fa-comments-o"></i> <a href="#">7 Comments</a></li>
                 </ul>
-                <a class="likes" href="#"><i class="fa fa-heart"></i>239</a>
+                <br>
+                <ul class="list-unstyled list-inline blog-info">
+                    <li (click)="goReserve(item.spot.title)"><i class="fa fa-bus"></i> transportaion</li>
+                    <li class="pull-right" (click)="goReserve(item.spot.title)"><i class="fa icon-hotel-restaurant-001"></i> hotel</li>
+                </ul>
             </div>
         </div>
     </li>
   </ul>
-  <button type="" ion-button (click)="editPlan()">수정</button>
+  
+</div>
 </ion-content>
