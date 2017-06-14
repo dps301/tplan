@@ -37,6 +37,7 @@ ion-nav {
 }
 
 ion-footer {
+    background-color: #4fd2c2;
     ul {
         padding: 0px !important;
         li {
@@ -56,7 +57,7 @@ ion-footer {
         ion-col {
             align-self: center;
             text-align: center;
-            color: #4fd2c2;
+            color: #fff;
             font-size: 1.8rem;
             line-height: 1.2;
         }
@@ -64,4 +65,13 @@ ion-footer {
 }
 ion-footer::before {
     display: none;
+}
+.centersss{
+    margin-left: 120px;
+    margin-top: 5px;
+}
+.navbar-brand > img {
+    width: 110px;
+    opacity: .8;
+    margin-top: 5px;
 }
