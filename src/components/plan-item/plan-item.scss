@@ -1,17 +1,33 @@
 plan-item {
     .title {
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 700;
+        color: white;
+        z-index: 3333;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+    }
+    .date{
+        color: white;
+        z-index: 3333;
+        position: absolute;
+        top: 70%;
+        right: 10%;
     }
 
     img {
         object-fit: cover;
-        width: 130px;
+        width: 140px;
         height: 130px;
 
     }
+    .fon{
+        color: white;
+        z-index: 3333;
+    }
     .boxcon{
-        margin-bottom:20px; 
+        margin-bottom:10px; 
     }
     .boxbg{
         position: relative;

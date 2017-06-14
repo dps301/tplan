@@ -6,42 +6,54 @@
 				<em class="block-name">
 					<span>{{title}}</span> 
 				</em>
-                <button class="pull-right" type="" ion-button (click)="editPlan()">수정</button>
+                <div class="pull-right btnColor" type="" ion-button (click)="editPlan()">수정</div>
 			</h3>
 		</div>
 	</div>
 </div>
 <div class="con">
   <ul class="timeline-v1 col-xs-11 col-md-12">
-    <li *ngFor="let item of spotList; let i = index;" class="timeline-inverted">
-        <div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
-        <div class="timeline-panel">
-            <div class="timeline-heading">
-                <!--<img class="" [src]="item.image[0].image" alt="" width="10px" height="10px"/>-->
-                <div class="funny-boxes funny-boxes-top-sea">
-                    <div class="row">
-                        <div class="col-xs-6 funny-boxes-img">
-                            <img class="img-responsive" [src]="item.image[0].image" alt="">
-                        </div>
-                        <div class="col-xs-6">
-                            <h3>{{item.spot.title}} </h3>
+      <ng-container *ngFor="let item of spotList; let i = index;">
+        <li [class.hide]="!i">
+            <div class="timeline-badge primary" ><i class="glyphicon glyphicon-record" style="color:#4FD2C2;"></i></div>
+            <div class="timeline-panel" style="background-color:#4FD2C2;">
+                <div class="timeline-body text-justify">
+                    <ion-row>
+                        <ion-col class="bordd1 text-center" col-7 (click)="goReserve(item.spot.title)">
+                            HOW TO GET THERE?
+                        </ion-col>
+                        <ion-col class=" bordd text-center" col-5 (click)="goReserve(item.spot.title)">
+                            FIND HOTEL
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </div>
+        </li>        
+        <li class="timeline-inverted">
+            <div class="timeline-badge primary"><i class="glyphicon glyphicon-record"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <!--<img class="" [src]="item.image[0].image" alt="" width="10px" height="10px"/>-->
+                    <div class="funny-boxes funny-boxes-top-sea">
+                        <div class="row">
+                            <div class="col-xs-6 funny-boxes-img">
+                                <img class="img-responsive" [src]="item.image[0].image" alt="">
+                            </div>
+                            <div class="col-xs-6">
+                                <h3>{{item.spot.title}} </h3>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="timeline-footer">
+                    <ul class="list-unstyled list-inline blog-info">
+                        <li><i class="fa fa-clock-o"></i> 07:00~15:00</li>
+                        <li><i class="fa fa-comments-o"></i> <a href="#">7 Comments</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="timeline-footer">
-                <ul class="list-unstyled list-inline blog-info">
-                    <li><i class="fa fa-clock-o"></i> 07:00~15:00</li>
-                    <li><i class="fa fa-comments-o"></i> <a href="#">7 Comments</a></li>
-                </ul>
-                <br>
-                <ul class="list-unstyled list-inline blog-info">
-                    <li (click)="goReserve(item.spot.title)"><i class="fa fa-bus"></i> transportaion</li>
-                    <li class="pull-right" (click)="goReserve(item.spot.title)"><i class="fa icon-hotel-restaurant-001"></i> hotel</li>
-                </ul>
-            </div>
-        </div>
-    </li>
+        </li>
+    </ng-container>
   </ul>
   
 </div>
