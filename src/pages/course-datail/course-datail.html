@@ -28,7 +28,7 @@
 	<div class="row">
 		<div class="col-xs-6"[ngClass]="{checked: item.checked}" *ngFor="let item of spotList; let i = index;">
 			<div class="spot-main-image">
-				<button type="" class="check-btn" (click)="item.checked = checkThisOut(item.checked);">ckck</button>
+				<button type="" class="sds" (click)="item.checked = checkThisOut(item.checked);"><span aria-hidden="true" class="icon-check"></span></button>
 				<img [src]="item.image" alt="" data-toggle="modal" data-target="#myModal" (click)="selectedIdx = i; getSpotImage()">
 				<div class="spot-checked" *ngIf="selectedIdx != -1 && item.checked" data-toggle="modal" data-target="#myModal" (click)="selectedIdx = i; getSpotImage()">
 					<ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
@@ -82,6 +82,6 @@
 		</div>
 	</div>
 							
-	<button type="" ion-button (click)="addCourseDetail()">저 to the 장</button>
-	<button type="" ion-button (click)="deletePlan()" *ngIf="planNo">삭 to the 제</button>
+	<button class ="btttn pull-right" type="" ion-button (click)="addCourseDetail()">SAVE</button>
+	<button class ="btttn pull-right" type="" ion-button (click)="deletePlan()" *ngIf="planNo">DELETE</button>
 </ion-content>
