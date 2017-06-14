@@ -31,46 +31,41 @@
     </a>
   </div>  
   <div class="filter" (click)="filterOn = !filterOn" [class.hide]="filterOn">
-      <h2 class="filterWord text-center">Find On</h2>
+    <span class="filter-title">Design your own course</span>
   </div> 
-  <form action="#" class="sky-form" [class.hide]="!filterOn">
+  <div class="sky-form" [class.hide]="!filterOn">
     <fieldset>
       <section>
-        <label class="label">Select</label>
+        <label class="label">Select City</label>
         <label class="select">
-            <select>
-                <option value="0">Choose name</option>
-                <option value="1">Alexandra</option>
-                <option value="2">Alice</option>
-                <option value="3">Anastasia</option>
-                <option value="4">Avelina</option>
+            <select [(ngModel)]="seletedCity">
+              <option [ngValue]="null">All</option>
+              <option [ngValue]="item.id" *ngFor="let item of variable.cities">{{item.name}}</option>
             </select>
-            <i></i>
+          <i></i>
         </label>
       </section>
       <section>
         <label class="label">Columned checkboxes</label>
           <div class="row">
               <div class="col col-4">
-                  <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Alexandra</label>
-                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Alice</label>
-                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anastasia</label>
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Alexandra</label>
+                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Alice</label>
+                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anastasia</label>
               </div>
               <div class="col col-4">
-                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Avelina</label>
-                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Basilia</label>
-                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Beatrice</label>
+                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Avelina</label>
+                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Basilia</label>
+                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Beatrice</label>
               </div>
               <div class="col col-4">
-                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Cassandra</label>
-                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Clemencia</label>
-                  <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Desiderata</label>
+                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Cassandra</label>
+                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Clemencia</label>
+                <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Desiderata</label>
               </div>
           </div>
       </section>
     </fieldset>
-  </form>
-  <div class="col-xs-12 item">
-    <course-item   *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" (click)="goDetail(item.id, item.image, item.title)"></course-item>
   </div>
+  <course-item *ngFor="let item of courses" [id]="item.id" [title]="item.title" [image]="item.image" [content]="item.content" [like]="item.like" (click)="goDetail(item.id, item.image, item.title)"></course-item>
 </ion-content>

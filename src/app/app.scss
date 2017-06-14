@@ -19,12 +19,23 @@ ion-header {
         border: none !important;
         background: white !important;
     }
-    .one-page-header {
-        margin: 0 !important;
-        box-shadow: none !important;
-    }
-    .navbar-brand {
-        padding: 0px !important;
+
+    ion-navbar .toolbar-content {
+        padding: 4px 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            flex: 1;
+            align-self: center;
+        }
+        .login {
+            flex: 1;
+            align-self: center;
+            text-align: right;
+        }
     }
 }
 

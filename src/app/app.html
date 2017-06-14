@@ -1,19 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <div class="one-page-header navbar navbar-default navbar-fixed-animate homeapp-header" data-role="navigation">
-      <div class="navbar-brand centersss" (click)="changeTab(coursePage)">
-        <span >
-          <a class="navbar-brand " href="#">
-					  <img src="assets/img/logo.png" alt="Logo" width="110px">
-				  </a>
-        </span>
-      </div>
-      <span class="pull-right item"> 
-        <span aria-hidden="true" class="icon-login" style="font-size: 30px;" (click)="changeTab(loginPage)" *ngIf="!loginSession.id"></span>
-        <span aria-hidden="true" class="icon-logout" style="font-size: 30px;" type="" (click)="loginSession.clear()" *ngIf="loginSession.id"></span>
-        {{loginSession.id}}
-      </span>
-    </div>
+    <span class="login">
+      &nbsp;
+    </span>
+    <span class="logo">
+      <img src="assets/img/logo.png" alt="Logo" width="110px">
+    </span>
+    <span class="login"> 
+      <span aria-hidden="true" class="icon-login" style="font-size: 30px;" (click)="changeTab(loginPage)" *ngIf="!loginSession.id"></span>
+      <span aria-hidden="true" class="icon-logout" style="font-size: 30px;" type="" (click)="loginSession.clear()" *ngIf="loginSession.id"></span>
+      {{loginSession.id}}
+    </span>
   </ion-navbar>
 </ion-header>
 <ion-content>

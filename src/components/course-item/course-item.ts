@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+declare var window: any;
+
 @Component({
   selector: 'course-item',
   templateUrl: 'course-item.html'
