@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ReservePage } from './reserve';
 import { CourseItemComponentModule } from '../../components/course-item/course-item.module';
+import { HotelItemComponentModule } from '../../components/hotel-item/hotel-item.module';
+import { HotelDetailPageModule } from '../hotel-detail/hotel-detail.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +11,9 @@ import { CourseItemComponentModule } from '../../components/course-item/course-i
   ],
   imports: [
     IonicPageModule.forChild(ReservePage),
-    CourseItemComponentModule
+    HotelItemComponentModule,
+    CourseItemComponentModule,
+    HotelDetailPageModule
   ],
   exports: [
     ReservePage

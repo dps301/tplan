@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HotelDetailPage } from '../hotel-detail/hotel-detail';
 
 @IonicPage()
 @Component({
@@ -11,70 +12,14 @@ export class ReservePage {
   location: Array<any> = ['Seoul', 'Busan', 'Jeju','Daegu', 'JeonJu'];
   innData: Array<any> = [
     {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
+      "name": "Apple Tree Hotel",
+      "location": "558, Handong-ro, Namsong-ri, Heunghae-eup, Buk-gu",
+      "image": "http://52.78.230.42:3000/aw/d.png"
     },
     {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
-    },
-    {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
-    },
-    {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
-    },
-    {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
-    },
-    {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
-    },
-    {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
-    },
-    {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
-    },
-    {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
-    },
-    {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
-    },
-    {
-      "name": "애플트리호텔",
-      "location": "Seoul",
-      "content": "경북 포항시에 위치한 애틀트리 호텔은 비즈니스 코너가 잘 갖추어져 있고 여행객을 위하여 아침조식 무료서비스도 있으며 로비에서는 간단한 차도 즐길 수도 있다.  주변 볼거리로는 구룡포, 호미곶 일출 등이 있고 포항의 유명한 먹거리로 구룡포 과메기를 꼽을 수 있다.  포항버스터미널은 도보로 5분거리에 있고 포항공항은 차량으로 10분이면 이동가능하여 이용하기 편리하다.  또한 기업체할인과 주말할인도 있으니 비즈니스를 위한 여행객에게도 큰 도움이 된다.",
-      "image": "https://st.hzcdn.com/simgs/4891af010f0c7a1d_4-1340/modern-bedroom.jpg"
+      "name": "Hwanho Tree Hotel",
+      "location": "558, Handong-ro, Namsong-ri, Heunghae-eup, Buk-gu",
+      "image": "http://52.78.230.42:3000/aw/e.png"
     },
   ];
 
@@ -83,6 +28,9 @@ export class ReservePage {
 
   ionViewDidLoad() {
     this.title = this.navParams.get('title');
+  }
+  goDetail(name: string, location: string, image: string) {
+    this.navCtrl.push(HotelDetailPage, {name: name, location: location, image: image});
   }
 
 }

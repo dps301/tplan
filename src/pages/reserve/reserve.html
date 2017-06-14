@@ -1,11 +1,18 @@
-<ion-content>
-    <h3>{{title}} 주변에 있는 호텔</h3>
-    <div class="col-md-3 short-info short-info-bg-1 equal-height-column margin" *ngFor="let item of innData">
-        <div class="img-container" [ngStyle]="{'background': 'url(' + item.image + ')'}">
-        </div>
-        <div class="short-info-text" height="80px">
-            <h2>{{item.name}} </h2>
-            <p>{{item.content}} </p>
-        </div>
-    </div>
+
+<ion-content class="bbg">
+  <h3 class="tag">{{title}} 주변에 있는 호텔</h3>
+  <hr class="hrtag">
+  <ng-container *ngFor="let item of innData">
+    <ion-row class="tag ion" (click)="goDetail(item.name, item.location, item.image)" >
+      <ion-col col-5>
+        <img [src]="item.image">
+      </ion-col>
+      <ion-col col-7>
+        <div class="title1">{{item.name}}</div>
+        <div>{{item.location}}</div>
+        <div><i class="fa fa-star-o"></i> 5.0 </div>
+      </ion-col>
+    </ion-row>
+    <hr class="hrtag">
+  </ng-container>
 </ion-content>
