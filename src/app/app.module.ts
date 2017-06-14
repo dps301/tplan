@@ -17,6 +17,7 @@ import { PlanPageModule } from '../pages/plan/plan.module';
 import { JoinPageModule } from '../pages/join/join.module';
 import { LoginSessionService } from '../services/login.session';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { VariableService } from '../services/variable';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
     CommonProvider,
     LoginSessionService,
     NativeStorage,
+    VariableService
   ]
 })
 export class AppModule {}

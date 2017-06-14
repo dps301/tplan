@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 import { CourseDatailPage } from '../course-datail/course-datail';
 import { CourseProvider } from '../../providers/course/course';
+import { VariableService } from '../../services/variable';
 
 @IonicPage()
 @Component({
@@ -11,8 +12,9 @@ import { CourseProvider } from '../../providers/course/course';
 export class CoursePage {
   courses: Array<any> = [];
   filterOn: boolean = false;
+  seletedCity: number = null;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider, private variable: VariableService) {
   }
 
   ionViewDidLoad() {
@@ -20,7 +22,7 @@ export class CoursePage {
   }
 
   getCourse() {
-    this.courseProvider.getCourse()
+    this.courseProvider.getCourse(this.seletedCity)
     .subscribe(
       data => {
         this.courses = data.json();

@@ -6,12 +6,17 @@ import 'rxjs/add/operator/map';
 export class CourseProvider {
 
   resource: string = '/course';
+  city_resource: string = '/city';
 
   constructor(public http: HttpService) {
   }
 
-  getCourse(filter = null) {
-    return this.http.post(this.resource)
+  getCity() {
+    return this.http.get(this.city_resource)
+  }
+
+  getCourse(cityNo = null, attr = null) {
+    return this.http.post(this.resource, {cityNo: cityNo, attr: attr})
   }
 
   getSpotImage(spotNo) {

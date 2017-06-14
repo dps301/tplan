@@ -1,5 +1,4 @@
 page-course {
-    
     .carousel-control {
         background-image: none !important;
     }
@@ -8,7 +7,7 @@ page-course {
         transition-property: opacity, max-height;
         transition-duration: 1s, 1s;
         opacity: 1;
-        max-height: 40%;
+        max-height: auto;
     }
     .carousel.animation-hide {
         transition-property: opacity, max-height;
@@ -16,18 +15,23 @@ page-course {
         opacity: 0;
         max-height: 0px;
     }
-    .item{
+    .item {
+        display: inline-block;
+        background: #e6e7e8;
         padding-right: 0px;
         padding-left: 0px;
     }
     .filter{
-        z-index: 33333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         background-color: #4FD2C2; 
         height: 70px;
-        .filterWord{
-            padding-top: 25px;
+
+        .filter-title{
             color: white;
+            font-size: 2rem;
         }
     }
 }
