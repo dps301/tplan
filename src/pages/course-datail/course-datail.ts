@@ -68,6 +68,10 @@ export class CourseDatailPage {
       if(this.spotList[index].checked)
         this.checkedSpotList.push(this.spotList[index]);
     }
+    if(new Date(this.startDt) > new Date(this.endDt)) {
+      alert('Check date!');
+      return ;
+    }
     this.planProvider.addPlan(this.planNo, this.courseNo, this.title, this.image, this.checkedSpotList, this.startDt.length > 10 ? this.startDt.slice(0, 10).replace('T', ' ') : this.startDt, this.endDt.length > 10 ? this.endDt.slice(0, 10).replace('T', ' ') : this.endDt)
     .subscribe(
       data => {

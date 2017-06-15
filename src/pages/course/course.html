@@ -6,7 +6,7 @@
     </ol>-->
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox" (swipe)="swipeTo($event)">
+    <div class="carousel-inner" role="listbox">
       <div class="item" *ngFor="let item of randomCourses; let isFirst = first" [ngClass]="{'active': isFirst}">
         <div class="title">
           {{item.title}}
@@ -44,7 +44,7 @@
         <label class="label">Themes</label>
           <div class="row">
             <div class="col-xs-6" *ngFor="let item of variable.attrs; let idx = index">
-              <label class="checkbox"><input type="checkbox" name="checkbox" (change)="attrChanges($event.target.value, idx)"><i></i>{{item.name}}</label>
+              <label class="checkbox"><input type="checkbox" name="checkbox" (change)="attrChanges($event.target.checked, idx)"><i></i>{{item.name}}</label>
             </div>
           </div>
       </section>
