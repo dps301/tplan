@@ -36,5 +36,10 @@ export class MyApp {
   changeTab(tab) {
     this.nav.setRoot(tab);
   }
+
+  logout() {
+    this.loginSession.clear();
+    alert('Logout Success');
+  }
 }
 

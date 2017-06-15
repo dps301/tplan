@@ -8,7 +8,7 @@
     </span>
     <span class="login"> 
       <span aria-hidden="true" class="icon-login" style="font-size: 30px;" (click)="changeTab(loginPage)" *ngIf="!loginSession.id"></span>
-      <span aria-hidden="true" class="icon-logout" style="font-size: 30px;" type="" (click)="loginSession.clear()" *ngIf="loginSession.id"></span>
+      <span aria-hidden="true" class="icon-logout" style="font-size: 30px;" type="" (click)="logout()" *ngIf="loginSession.id"></span>
     </span>
   </ion-navbar>
 </ion-header>
