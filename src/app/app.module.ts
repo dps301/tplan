@@ -22,7 +22,7 @@ import { Square } from '../directives/square/square';
 
 @NgModule({
   declarations: [
-    MyApp,
+    MyApp
   ],
   imports: [
     BrowserModule,
