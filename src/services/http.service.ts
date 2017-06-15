@@ -48,7 +48,8 @@ export class HttpService {
     }
 
     public setHeader(userNo) {
-        this.headers = new Headers({ 'Content-Type': 'application/json', 'userNo': userNo });
+        this.headers = new Headers({ 'Content-Type': 'application/json', 'userNo': 1 });
+        // this.headers = new Headers({ 'Content-Type': 'application/json', 'userNo': userNo });
         this.options = new RequestOptions({ headers: this.headers });
     }
 }

@@ -10,6 +10,10 @@ export class CommonProvider {
   constructor(public http: HttpService) {
   }
 
+  getHotel() {
+    return this.http.get('/hotel')
+  }
+
   getUser(id) {
     return this.http.get(this.userResource, {id: id})
   }
