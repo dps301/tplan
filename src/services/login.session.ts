@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { HttpService } from './http.service';
 
 @Injectable()
 export class LoginSessionService {
@@ -7,22 +8,20 @@ export class LoginSessionService {
     name: string = '';
     nation: string = '';
 
-    constructor(private nativeStorage: NativeStorage) {
-        if(this.get()) {
-            this.id = this.get().id;
-            this.name = this.get().name;
-            this.nation = this.get().nation;
-        }
+    constructor(private nativeStorage: NativeStorage, private http: HttpService) {
+        this.autoSet();
     }
 
-    get(): any {
+    autoSet(): any {
         this.nativeStorage.getItem('loginSession')
         .then(
             data => {
-                return data;
+                this.id = data.id;
+                this.name = data.name;
+                this.nation = data.nation;
+                this.http.setHeader(data.id);
             },
             error => {
-                return null;
             }
         );
     }
@@ -31,9 +30,10 @@ export class LoginSessionService {
         .then(
             () => {
                 console.log('Stored item! userID');
-                this.id = this.get().id;
-                this.name = this.get().name;
-                this.nation = this.get().nation;
+                this.id = id;
+                this.name = name;
+                this.nation = nation;
+                this.http.setHeader(id);
             },
             error => { 
                 console.error('Error storing item', error);
@@ -44,6 +44,10 @@ export class LoginSessionService {
         this.nativeStorage.clear()
         .then(
             () => {
+                this.id = '';
+                this.name = '';
+                this.nation = '';
+                this.http.setHeader('');
                 console.log('storage cleared!');
             },
             error => {
