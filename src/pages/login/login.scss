@@ -16,7 +16,10 @@ page-login {
     }
     .btns {
         flex: 1;
-        width: 50%;
+        width: 60%;
+        .btn {
+            padding: 12px 20px !important;
+        }
         .btn-facebook {
             background-color: #4863ae;
             color: white;

@@ -3,8 +3,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PlanProvider } from '../../providers/plan/plan';
 import { CourseProvider } from '../../providers/course/course';
 import * as _ from 'lodash';
-import { ViewChild } from '@angular/core';
+import { ViewChild, ChangeDetectorRef } from '@angular/core';
 import { Slides } from 'ionic-angular';
+import { PlanPage } from '../plan/plan';
+import { UtilService } from '../../services/util.service';
 
 @IonicPage()
 @Component({
@@ -33,7 +35,7 @@ export class CourseDatailPage {
   selectedIdx: number = -1;
   selectedSpotImage: Array<any> = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider, private planProvider: PlanProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider, private planProvider: PlanProvider, private cdRef: ChangeDetectorRef, private util: UtilService) {
   }
 
   ionViewDidLoad() {
@@ -69,14 +71,15 @@ export class CourseDatailPage {
         this.checkedSpotList.push(this.spotList[index]);
     }
     if(new Date(this.startDt) > new Date(this.endDt)) {
-      alert('Check date!');
+      this.util.showAlert('Error', 'Check date!');
       return ;
     }
     this.planProvider.addPlan(this.planNo, this.courseNo, this.title, this.image, this.checkedSpotList, this.startDt.length > 10 ? this.startDt.slice(0, 10).replace('T', ' ') : this.startDt, this.endDt.length > 10 ? this.endDt.slice(0, 10).replace('T', ' ') : this.endDt)
     .subscribe(
       data => {
         console.log(data);
-        alert('Plan saved!');
+        this.util.showAlert('', 'Plan saved!');
+        this.navCtrl.setRoot(PlanPage);
       },
       error => {
 
@@ -88,7 +91,8 @@ export class CourseDatailPage {
     this.planProvider.deletePlan(this.planNo)
     .subscribe(
       data => {
-        alert('Deleted!');
+        this.util.showAlert('', 'Plan deleted!');
+        this.navCtrl.setRoot(PlanPage);
       },
       error => {
 

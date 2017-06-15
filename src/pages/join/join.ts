@@ -4,6 +4,7 @@ import { Http } from '@angular/http';
 import { CommonProvider } from '../../providers/common/common';
 import { CoursePage } from '../course/course';
 import { LoginSessionService } from '../../services/login.session';
+import { UtilService } from '../../services/util.service';
 
 @IonicPage()
 @Component({
@@ -17,7 +18,7 @@ export class JoinPage {
   country: string = '';
   countries: Array<any> = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, private commonProvider: CommonProvider, private loginSession: LoginSessionService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, private commonProvider: CommonProvider, private loginSession: LoginSessionService, private util: UtilService) {
   }
 
   ionViewDidLoad() {
@@ -40,12 +41,12 @@ export class JoinPage {
       data => {
         console.log('가입완료');
         this.loginSession.set(this.id, this.name, this.country);
-        alert('Welcome! ' + this.name);
+        this.util.showToast('top', this.name);
         this.navCtrl.setRoot(CoursePage);
       },
       error => {
         console.log('가입에러');
-        alert('Join failed!');
+        this.util.showAlert('Error', 'Join failed!');
         this.navCtrl.pop();
       }
     );
