@@ -1,0 +1,35 @@
+<ion-content class="bbg">
+    <!--<h3>{{title}} 주변에 있는 호텔</h3>-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img [src]="image" alt="...">
+      </div>
+      <div class="title">{{name}}
+      </div>
+      <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i> 4.0
+      </div>
+      <div class="imgg">
+        <img src="../assets/img/wowicon.png">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div class="buttons">
+    <button class="hdb text-center"> Reserve </button>  
+    <button class="hdb text-center"> Contact </button>
+  </div>
+  <div class="loca">{{location}}</div>
+  <map></map>
+</ion-content>

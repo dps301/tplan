@@ -1,4 +1,15 @@
-<ion-content padding>
-로그인
-  <button type="" (click)="fbLogin()">facebook</button>
-</ion-content>
+
+<div class="container">
+    <div class="reg-block">
+        <div class="reg-block-header">
+            <h2>Login</h2>
+            <button (click)="fbLogin()" class="btn btn-block btn-facebook">
+                <i class="fa fa-facebook"></i> Facebook
+            </button>
+            <button (click)="googleLogin()"  class="btn btn-block btn-googleplus">
+                <i class="fa fa-google-plus"></i> google
+            </button>
+            <p>Don't Have Account? Click <a class="color-green" href="#">inquiry</a> to registration.</p>            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+page-plan-detail {
+
+    .breadcrumbs{
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%;
+        z-index: 100000;
+    }
+    .btnColor{
+        color: #4FD2C2;
+        background-color: white;
+        border: 1px solid #4FD2C2;
+    }
+    .con{
+        margin-top: 70px;
+    }
+    .pan{
+        background-color: #4FD2C2;
+    }
+    .bordd{
+        border-left: 4px solid white;
+        color: white;
+        font-weight: 700;
+        font-size: 12px;
+    }
+    .bordd1{
+        font-size: 12px;
+        color: white;
+        font-weight: 700;
+    }
+    ul.timeline-v1 > li > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 11px;
+        left: -11px;
+        right: auto;
+        border-right-color: #4FD2C2 !important;
+        
+    }    
+}
