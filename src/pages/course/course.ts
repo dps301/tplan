@@ -17,16 +17,18 @@ export class CoursePage {
   filterOn: boolean = false;
   seletedCity: number = null;
 
+  selectedAttrs: Array<any> = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private courseProvider: CourseProvider, private variable: VariableService) {
   }
 
   ionViewDidLoad() {
-    this.courseProvider.getCourse(this.seletedCity)
+    this.courseProvider.getCourse()
     .subscribe(
       data => {
         this.courses = data.json();
         var tempCourse: Array<any> = _.cloneDeep(data.json());
-        
+
         for(var i = 0; i < 4; i++) {
           var rnum = Math.floor(Math.random()*tempCourse.length);
           this.randomCourses.push(tempCourse[rnum]);
@@ -34,10 +36,16 @@ export class CoursePage {
         }
       }
     );
+    this.selectedAttrs = _.cloneDeep(this.variable.attrs);
   }
 
   getCourse() {
-    this.courseProvider.getCourse(this.seletedCity)
+    this.courseProvider.getCourse(this.seletedCity, this.selectedAttrs
+    .filter(
+      (item) => {
+        return item.checked == true;
+      })
+    )
     .subscribe(
       data => {
         this.courses = data.json();
@@ -49,11 +57,8 @@ export class CoursePage {
     this.navCtrl.push(CourseDatailPage, {"courseNo": id, "image": image, "title": title, "planNo": ''});
   }
 
-  swipeTo(ev) {
-    // console.log(ev.direction);
-  }
-
   attrChanges(value, idx) {
-    console.log(JSON.stringify(value) + idx);
+    this.selectedAttrs[idx].checked = value;
+    this.getCourse();
   }
 }

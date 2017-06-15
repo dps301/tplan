@@ -11,9 +11,11 @@ page-course-datail {
     .container {
         
     }
+
     .container.checked {
         background: red;
     }
+
     .nopadding{
         padding-right: 5px; 
         padding-left: 5px; 
@@ -22,6 +24,12 @@ page-course-datail {
     ion-datetime {
         flex: 2;
     }
+    ion-item {
+        .item-inner {
+            border: none !important;
+        }
+    }
+
     .carousel-control {
         background-image: none !important;
     }
