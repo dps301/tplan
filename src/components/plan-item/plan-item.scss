@@ -1,26 +1,26 @@
 plan-item {
-    .title {
-        font-size: 18px;
-        font-weight: 700;
-        color: white;
-        z-index: 3333;
+    .text-area {
         position: absolute;
-        top: 50%;
-        right: 10%;
-    }
-    .date{
-        color: white;
-        z-index: 3333;
-        position: absolute;
-        top: 70%;
-        right: 10%;
+        right: 8%;
+        bottom: 5%;
+        text-align: right;
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            z-index: 3333;
+        }
+        .date{
+            color: white;
+            z-index: 3333;
+        }
     }
 
     img {
         object-fit: cover;
         width: 140px;
         height: 130px;
-
     }
     .fon{
         color: white;
@@ -31,6 +31,9 @@ plan-item {
     }
     .boxbg{
         position: relative;
+        background-size: cover !important;
+        height: 140px;
+        background-position: center bottom !important;
     }
     .ganzi{
         position: absolute;
@@ -42,6 +45,7 @@ plan-item {
     }
     
 }
+
 .content-md hr{
-        background-color: #44D887;
-    }
+    background-color: #44D887;
+}
