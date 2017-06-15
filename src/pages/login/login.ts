@@ -50,6 +50,7 @@ export class LoginPage {
     .subscribe(
       data => {
         this.loginSession.set(data[0].id, data[0].name, data[0].nation);
+        alert('Welcome! ' + data[0].name)
         this.navCtrl.setRoot(CoursePage);
       },
       error => {
