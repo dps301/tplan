@@ -8,6 +8,7 @@ import { CoursePage } from '../pages/course/course';
 import { PlanPage } from '../pages/plan/plan';
 import { LoginSessionService } from '../services/login.session';
 import { JoinPage } from '../pages/join/join';
+import { UtilService } from '../services/util.service';
 
 @Component({
   templateUrl: 'app.html'
@@ -22,14 +23,14 @@ export class MyApp {
   planPage = PlanPage;
   joinPage = JoinPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private loginSession: LoginSessionService) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private loginSession: LoginSessionService, private util: UtilService) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
       
-      this.rootPage = this.joinPage;
+      this.rootPage = this.coursePage;
     });
   }
 
@@ -39,7 +40,7 @@ export class MyApp {
 
   logout() {
     this.loginSession.clear();
-    alert('Logout Success');
+    this.util.showAlert('', 'Logout success');
   }
 }
 

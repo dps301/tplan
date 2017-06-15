@@ -1,34 +1,27 @@
 page-join {
     .scroll-content {
-        // background: red !important;
+        background: url('assets/img/splash.png') !important;
+        background-size: cover;
+        background-position: center;
+    }
+
+    input {
+        text-align: right !important;
     }
 
     ion-select {
-        min-width: 80%;
+        min-width: 70%;
+        text-align: right;
     }
 
     .join-container {
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        justify-content: center;
+        margin-top: 40%;
     }
 
     .input-items {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
     }
 
     .btns {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        margin-top: 10%;
     }
-}
-
-ion-footer {
-    display: none;
 }
