@@ -1,5 +1,30 @@
 page-join {
+    .scroll-content {
+        // background: red !important;
+    }
+
     ion-select {
-        max-width: 70% !important;
+        min-width: 80%;
+    }
+
+    .join-container {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .input-items {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .btns {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }

@@ -7,6 +7,7 @@ import { LoginPage } from '../pages/login/login';
 import { CoursePage } from '../pages/course/course';
 import { PlanPage } from '../pages/plan/plan';
 import { LoginSessionService } from '../services/login.session';
+import { JoinPage } from '../pages/join/join';
 
 @Component({
   templateUrl: 'app.html'
@@ -19,8 +20,7 @@ export class MyApp {
   coursePage = CoursePage;
   loginPage = LoginPage;
   planPage = PlanPage;
-
-  title = 'teach my plan';
+  joinPage = JoinPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private loginSession: LoginSessionService) {
     platform.ready().then(() => {
@@ -29,7 +29,7 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
       
-      this.rootPage = this.coursePage;
+      this.rootPage = this.joinPage;
     });
   }
 

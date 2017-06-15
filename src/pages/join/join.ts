@@ -41,12 +41,12 @@ export class JoinPage {
       data => {
         console.log('가입완료');
         this.loginSession.set(this.id, this.name, this.country);
-        this.util.showToast('top', this.name);
+        this.util.showToast('top', 'Welcome! '+this.name);
         this.navCtrl.setRoot(CoursePage);
       },
       error => {
         console.log('가입에러');
-        this.util.showAlert('Error', 'Join failed!');
+        this.util.showAlert('Error', 'Register failed!');
         this.navCtrl.pop();
       }
     );
