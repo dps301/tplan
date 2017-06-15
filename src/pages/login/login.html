@@ -1,15 +1,13 @@
-
-<div class="container">
-    <div class="reg-block">
-        <div class="reg-block-header">
-            <h2>Login</h2>
-            <button (click)="fbLogin()" class="btn btn-block btn-facebook">
-                <i class="fa fa-facebook"></i> Facebook
-            </button>
-            <button (click)="googleLogin()"  class="btn btn-block btn-googleplus">
-                <i class="fa fa-google-plus"></i> google
-            </button>
-            <p>Don't Have Account? Click <a class="color-green" href="#">inquiry</a> to registration.</p>            
-        </div>
+<ion-content>
+    <hr/>
+    <h2>Login</h2>
+    <div class="btns">
+        <button (click)="fbLogin()" class="btn btn-block btn-facebook">
+            <i class="fa fa-facebook"></i> &nbsp; Facebook
+        </button>
+        <button (click)="googleLogin()"  class="btn btn-block btn-googleplus">
+            <i class="fa fa-google-plus"></i> &nbsp; Google
+        </button>
     </div>
-</div>
+    <p>Don't Have Account?<br/>Click platform you have account</p>            
+</ion-content>

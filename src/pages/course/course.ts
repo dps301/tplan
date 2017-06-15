@@ -21,7 +21,19 @@ export class CoursePage {
   }
 
   ionViewDidLoad() {
-    this.getCourse();
+    this.courseProvider.getCourse(this.seletedCity)
+    .subscribe(
+      data => {
+        this.courses = data.json();
+        var tempCourse: Array<any> = _.cloneDeep(data.json());
+        
+        for(var i = 0; i < 4; i++) {
+          var rnum = Math.floor(Math.random()*tempCourse.length);
+          this.randomCourses.push(tempCourse[rnum]);
+          tempCourse.splice(rnum, 1);
+        }
+      }
+    );
   }
 
   getCourse() {
@@ -29,13 +41,6 @@ export class CoursePage {
     .subscribe(
       data => {
         this.courses = data.json();
-
-        var tempCourse: Array<any> = _.cloneDeep(data.json());
-        for(var i = 0; i < 4; i++) {
-          var rnum = Math.floor(Math.random()*tempCourse.length);
-          this.randomCourses.push(tempCourse[rnum]);
-          tempCourse.splice(rnum, 1);
-        }
       }
     );
   }
