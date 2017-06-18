@@ -7,7 +7,7 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-      <div class="item" *ngFor="let item of randomCourses; let isFirst = first" [ngClass]="{'active': isFirst}"  (click)="goDetail(item.id, item.image, item.title)">
+      <div class="item" *ngFor="let item of randomCourses; let isFirst = first" [ngClass]="{'active': isFirst}" (click)="goDetail(item.id, item.image, item.title)">
         <div class="title">
           {{item.title}}
         </div>

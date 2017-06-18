@@ -29,14 +29,13 @@ export class CoursePage {
         this.courses = data.json();
         var tempCourse: Array<any> = _.cloneDeep(data.json());
 
-        for(var i = 0; i < 4; i++) {
+        for(var i = 0; i < tempCourse.length; i++) {
           var rnum = Math.floor(Math.random()*tempCourse.length);
           this.randomCourses.push(tempCourse[rnum]);
           tempCourse.splice(rnum, 1);
         }
       }
     );
-    this.selectedAttrs = _.cloneDeep(this.variable.attrs);
   }
 
   getCourse() {
@@ -58,6 +57,8 @@ export class CoursePage {
   }
 
   attrChanges(value, idx) {
+    if(this.selectedAttrs.length == 0)
+      this.selectedAttrs = _.cloneDeep(this.variable.attrs);
     this.selectedAttrs[idx].checked = value;
     this.getCourse();
   }

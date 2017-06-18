@@ -17,6 +17,8 @@ export class HotelDetailPage {
   name: string = '';
   location: string = '';
   image: string = '';
+  map: string = '';
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -24,6 +26,7 @@ export class HotelDetailPage {
     this.image = this.navParams.get('image');
     this.name = this.navParams.get('name');
     this.location = this.navParams.get('location');
+    this.map = this.navParams.get('map');
   }
 
 }

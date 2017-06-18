@@ -24,7 +24,7 @@
 				<button type="" class="sds" (click)="item.checked = checkThisOut(item.checked); cdRef.detectChanges()">
 					<span aria-hidden="true" class="icon-check"></span>
 				</button>
-				<img square [src]="item.image" alt="" data-toggle="modal" data-target="#myModal" (click)="selectedIdx = i; getSpotImage()">
+				<img [src]="item.image" alt="" data-toggle="modal" data-target="#myModal" (click)="selectedIdx = i; getSpotImage()">
 				<div class="spot-checked" *ngIf="item.checked" data-toggle="modal" data-target="#myModal" (click)="selectedIdx = i; getSpotImage()">
 					<ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
 				</div>

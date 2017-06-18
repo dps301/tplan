@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PlanProvider } from '../../providers/plan/plan';
 import { CourseProvider } from '../../providers/course/course';
@@ -13,7 +13,8 @@ import { UtilService } from '../../services/util.service';
   selector: 'page-course-datail',
   templateUrl: 'course-datail.html',
 })
-export class CourseDatailPage {
+export class CourseDatailPage implements AfterViewInit {
+
  @ViewChild(Slides) slides: Slides;
 
   goToSlide() {
@@ -48,6 +49,10 @@ export class CourseDatailPage {
     this.endDt = new Date().toISOString();
 
     this.getCourseDetail();
+  }
+
+  ngAfterViewInit(): void {
+    this.cdRef.detectChanges();
   }
 
   getCourseDetail() {
