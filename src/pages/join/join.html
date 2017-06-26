@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="join-container">
+    <div class="input-items">
+      <ion-item>
+        <ion-label [ngClass]="{'label': false}" color="primary">Name</ion-label>
+        <ion-input placeholder="Type your name" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label [ngClass]="{'label': false}" color="primary">Countries</ion-label>
+        <ion-select placeholder="Select your country" [(ngModel)]="country">
+          <ion-option [value]="item.name" *ngFor="let item of countries">{{item.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+    <div class="btns">
+      <button type="" ion-button full (click)="join()">Register</button>
+      <button type="" ion-button full (click)="navCtrl.pop()">Cancel</button>
+    </div>
+  </div>
+</ion-content>

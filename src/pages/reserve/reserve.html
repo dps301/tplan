@@ -1,0 +1,15 @@
+<ion-content class="bbg">
+  <h3 class="tag text-center">The Hotel near by {{title}} </h3>
+  <ng-container *ngFor="let item of innData">
+    <ion-row class="tag ion" (click)="goDetail(item.name, item.location, item.image, item.map)" >
+      <ion-col col-5>
+        <img [src]="item.image">
+      </ion-col>
+      <ion-col col-7>
+        <div class="title1">{{item.name}}</div>
+        <div>{{item.location}}</div>
+        <div><i class="fa fa-star-o"></i> 5.0 </div>
+      </ion-col>
+    </ion-row>
+  </ng-container>
+</ion-content>

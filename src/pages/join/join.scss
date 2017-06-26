@@ -1,0 +1,27 @@
+page-join {
+    .scroll-content {
+        // background: url('assets/img/splash.png') !important;
+        // background-size: cover;
+        // background-position: center;
+    }
+
+    input {
+        text-align: right !important;
+    }
+
+    ion-select {
+        min-width: 70%;
+        text-align: right;
+    }
+
+    .join-container {
+        margin-top: 40%;
+    }
+
+    .input-items {
+    }
+
+    .btns {
+        margin-top: 10%;
+    }
+}

@@ -14,3 +14,76 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+ion-header {
+    .toolbar-background {
+        border: none !important;
+        background: white !important;
+    }
+
+    ion-navbar .toolbar-content {
+        padding: 4px 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            flex: 1;
+            align-self: center;
+
+            img {
+                display: block;
+                margin: auto;
+            }
+        }
+        .login {
+            flex: 1;
+            align-self: center;
+            text-align: right;
+        }
+    }
+}
+
+.ion-page {
+    background: white;
+}
+
+ion-footer {
+    background-color: #4fd2c2;
+    ul {
+        padding: 0px !important;
+        li {
+            width: 50% !important;
+        }
+    }
+    border-top:1px solid #4fd2c2;
+
+    .subfooter .social-item:hover {
+        margin-top: 0px !important; 
+        height: 65px;
+    } 
+
+    ion-row {
+        height: 65px;
+
+        ion-col {
+            align-self: center;
+            text-align: center;
+            color: #fff;
+            font-size: 1.8rem;
+            line-height: 1.2;
+        }
+    }
+}
+ion-footer::before {
+    display: none;
+}
+.centersss{
+    margin-left: 120px;
+    margin-top: 5px;
+}
+.navbar-brand > img {
+    width: 110px;
+    opacity: .8;
+    margin-top: 5px;
+}
