@@ -2,18 +2,19 @@
 <div class="breadcrumbs">
 	<div class="container">
 		<div class=" g-heading-v10 text-center">
-			<h3>
-				<em class="block-name">
-					<span>{{title}}</span> 
-				</em>
-                <span class="pull-right btnColor" type="" ion-button (click)="editPlan()">수정</span>
-			</h3>
+            <div>
+                &nbsp;
+            </div>
+            <em class="block-name">
+                {{title}}
+            </em>
+            <span class="pull-right btnColor" type="" ion-button (click)="editPlan()">Edit</span>
 		</div>
 	</div>
 </div>
 <div class="con">
   <ul class="timeline-v1 col-xs-11 col-md-12">
-      <ng-container *ngFor="let item of spotList; let i = index;">
+      <ng-container *ngFor="let item of spotList; let i = index; let r = getRa">
         <li [class.hide]="!i">
             <div class="timeline-badge primary" ><i class="glyphicon glyphicon-record" style="color:#4FD2C2;"></i></div>
             <div class="timeline-panel" style="background-color:#4FD2C2;">
@@ -47,7 +48,7 @@
                 </div>
                 <div class="timeline-footer">
                     <ul class="list-unstyled list-inline blog-info">
-                        <li><i class="fa fa-clock-o"></i> 07:00~15:00</li>
+                        <li><i class="fa fa-clock-o"></i> 07:00 ~ 15:00</li>
                         <li><i class="fa fa-comments-o"></i> <a href="#">7 Comments</a></li>
                     </ul>
                 </div>

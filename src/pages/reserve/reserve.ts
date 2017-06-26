@@ -20,8 +20,8 @@ export class ReservePage {
     this.title = this.navParams.get('title');
     this.getHotel();
   }
-  goDetail(name: string, location: string, image: string) {
-    this.navCtrl.push(HotelDetailPage, {name: name, location: location, image: image});
+  goDetail(name: string, location: string, image: string, map: string) {
+    this.navCtrl.push(HotelDetailPage, {name: name, location: location, image: image, map: map});
   }
   getHotel() {
     this.commonProvider.getHotel()

@@ -6,6 +6,7 @@ import { CommonProvider } from '../../providers/common/common';
 import { JoinPage } from '../join/join';
 import { LoginSessionService } from '../../services/login.session';
 import { CoursePage } from '../course/course';
+import { UtilService } from '../../services/util.service';
 
 @IonicPage()
 @Component({
@@ -15,7 +16,7 @@ import { CoursePage } from '../course/course';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook, private gp: GooglePlus, private commonProvider: CommonProvider, private loginSession: LoginSessionService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook, private gp: GooglePlus, private commonProvider: CommonProvider, private loginSession: LoginSessionService, private util: UtilService) {
   }
 
   ionViewDidLoad() {
@@ -29,7 +30,7 @@ export class LoginPage {
       }, 
       (message) => {
         console.log('Error logging in');
-        alert(JSON.stringify(message));
+        this.util.showAlert('Error', JSON.stringify(message));
       }
     );
   }
@@ -40,7 +41,7 @@ export class LoginPage {
     }).then((res) => {
       this.checkIsUser(res.userId);
     }, (err) => {
-        alert('err '+err);
+        this.util.showAlert('Error', err);
     });
   }
 
@@ -50,7 +51,7 @@ export class LoginPage {
     .subscribe(
       data => {
         this.loginSession.set(data[0].id, data[0].name, data[0].nation);
-        alert('Welcome! ' + data[0].name)
+        this.util.showToast('top', 'Welcome! ' + data[0].name);
         this.navCtrl.setRoot(CoursePage);
       },
       error => {

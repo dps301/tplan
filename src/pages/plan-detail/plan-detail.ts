@@ -44,4 +44,8 @@ export class PlanDetailPage {
   editPlan() {
     this.navCtrl.push(CourseDatailPage, {"courseNo": this.courseNo, "image": this.image, "title": this.title, "planNo": this.planNo});
   }
+
+  rndNo() {
+    return Math.floor((Math.random() * 10) + 1);
+  }
 }

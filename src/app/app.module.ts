@@ -18,7 +18,7 @@ import { JoinPageModule } from '../pages/join/join.module';
 import { LoginSessionService } from '../services/login.session';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { VariableService } from '../services/variable';
-import { Square } from '../directives/square/square';
+import { UtilService } from '../services/util.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import { Square } from '../directives/square/square';
     CommonProvider,
     LoginSessionService,
     NativeStorage,
-    VariableService
+    VariableService,
+    UtilService
   ]
 })
 export class AppModule {}

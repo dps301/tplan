@@ -9,7 +9,7 @@ import { MapComponentModule } from '../../components/map/map.module';
   ],
   imports: [
     IonicPageModule.forChild(HotelDetailPage),
-    MapComponentModule
+    // MapComponentModule
   ],
   exports: [
     HotelDetailPage
